@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f18081bf-f8fd-4b74-b4a8-a48e59505e98" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MovieCrawlingPractice.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MovieCrawlingPractice.py" beforeDir="false" afterPath="$PROJECT_DIR$/MovieCrawlingPractice.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,8 +15,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/MovieCrawlingPractice.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="267">
-              <caret line="35" column="5" lean-forward="true" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
+            <state relative-caret-position="304">
+              <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -45,8 +44,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="363" />
-    <option name="y" value="21" />
+    <option name="x" value="-63" />
+    <option name="y" value="23" />
     <option name="width" value="1232" />
     <option name="height" value="1008" />
   </component>
@@ -127,7 +126,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="363" y="21" width="1232" height="1008" extended-state="0" />
+    <frame x="-63" y="23" width="1232" height="1008" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
@@ -162,8 +161,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/MovieCrawlingPractice.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
-          <caret line="35" column="5" lean-forward="true" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
+        <state relative-caret-position="304">
+          <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>
