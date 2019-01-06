@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f18081bf-f8fd-4b74-b4a8-a48e59505e98" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../../.gitmodules" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MovieCrawlingPractice.py" beforeDir="false" afterPath="$PROJECT_DIR$/MovieCrawlingPractice.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -15,8 +17,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/MovieCrawlingPractice.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
-              <caret line="7" column="32" lean-forward="true" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
+            <state relative-caret-position="171">
+              <caret line="9" column="3" lean-forward="true" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -126,7 +128,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="107" y="34" width="1232" height="1008" extended-state="0" />
+    <frame x="222" y="26" width="1232" height="1008" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
@@ -161,8 +163,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/MovieCrawlingPractice.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" column="32" lean-forward="true" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
+        <state relative-caret-position="171">
+          <caret line="9" column="3" lean-forward="true" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>
