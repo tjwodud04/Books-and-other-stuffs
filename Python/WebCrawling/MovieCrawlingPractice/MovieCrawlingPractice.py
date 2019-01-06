@@ -5,11 +5,10 @@ from selenium import webdriver
 import re
 
 #selenium for accessing to cgv website
-driver = webdriver.Chrome('/Users/LBuser/Desktop/chromedriver.exe')
-driver = webdriver.PhantomJS('/Users/LBuser/Desktop/phantomjs-2.1.1-windows/phantomjs-2.1.1-windows/bin/phantomjs.exe')
+driver = webdriver.Chrome('/Users/J/Desktop/chromedriver.exe')
+driver = webdriver.PhantomJS('/Users/J/Desktop/phantomjs-2.1.1-windows/bin/phantomjs.exe')
 driver.implicitly_wait(3)
-driver.get('/common/showtimes/iframeTheater.aspx?areacode=01&amp;theatercode=0074')
-
+driver.get('http://www.cgv.co.kr/common/showtimes/iframeTheater.aspx?areacode=01&theaterCode=0074&')
 
 req = requests.get('http://www.cgv.co.kr/common/showtimes/iframeTheater.aspx?areacode=01&theaterCode=0074&')
 
