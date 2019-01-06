@@ -1,6 +1,3 @@
 [submodule "Python/Tensorflow/Python/Tensorflow/models"]
 	path = Python/Tensorflow/Python/Tensorflow/models
 	url = https://github.com/donddog/models.git
-[submodule "Python/Tensorflow/models"]
-	path = Python/Tensorflow/models
-	url = https://github.com/donddog/models.git
