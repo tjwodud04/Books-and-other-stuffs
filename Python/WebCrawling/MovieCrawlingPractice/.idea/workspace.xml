@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f18081bf-f8fd-4b74-b4a8-a48e59505e98" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/MovieCrawlingPractice.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/MovieCrawlingPractice.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../딥러닝을 이용한 자연어 처리 입문 실습 01.py" beforeDir="false" />
-    </list>
+    <list default="true" id="f18081bf-f8fd-4b74-b4a8-a48e59505e98" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,7 +54,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="1">
     <option name="x" value="11" />
     <option name="y" value="34" />
     <option name="width" value="1119" />
@@ -164,7 +159,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="11" y="34" width="1119" height="1008" extended-state="0" />
+    <frame x="11" y="34" width="1119" height="1008" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
