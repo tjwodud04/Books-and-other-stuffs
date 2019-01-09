@@ -83,14 +83,59 @@ print(result2)
 # print(r8.search("aabc"))
 # print(r8.search("aaaaaaaaaabc"))
 # print(r8.search("abbbbbbbsdfc"))
+#
+# r8 = re.compile("[abc]kdf")
+# print(r8.search('zzz'))
+# print(r8.search('akdf'))
+# print(r8.search("baac"))
+# print(r8.search("bkdf"))
+#
+# r9 = re.compile("[a-z]")
+# print(r9.search('AAA'))
+# print(r9.search('aBC'))
+# print(r9.search('111'))
 
-r8 = re.compile("[abc]kdf")
-print(r8.search('zzz'))
-print(r8.search('akdf'))
-print(r8.search("baac"))
-print(r8.search("bkdf"))
+# r10 = re.compile("[^abc]")
+# print(r10.search("a"))
+# print(r10.search("ab"))
+# print(r10.search("b"))
+# print(r10.search("c"))
+# print(r10.search("qwopeiq"))
+# print(r10.search("111"))
+#
+# r11 = re.compile("ab.")
+#
+# print(r11.search("kkkabc"))
+# print(r11.match("kkkabc"))
+# print(r11.search("abckkk"))
+# print(r11.search("abckkk"))
 
-r9 = re.compile("[a-z]")
-print(r9.search('AAA'))
-print(r9.search('aBC'))
-print(r9.search('111'))
+text1 = "사과 딸기 수박 메론 바나나"
+print(re.split(" ", text1))
+
+text2 = """사과 
+딸기 
+수박 
+메론 
+바나나"""
+print(re.split("\n", text2))
+
+text3 = "사과+딸기+수박+메론+바나나"
+re.split("\+",text3)
+
+text4="""이름 : 김철수
+전화번호 : 010 - 1234 - 1234
+나이 : 30
+성별 : 남"""
+print(re.findall("\d+",text4))
+print(re.findall("\d+", "문자열입니다."))
+
+text5="Regular expression : \
+A regular expression, regex or regexp[1] \
+(sometimes called a rational expression)\
+[2][3] is, in theoretical computer science and formal language theory, \
+a sequence of characters that define a search pattern."
+Confinedtext = re.sub('[^a-zA-Z]',' ',text5)
+print(Confinedtext)
+SecondConfinedtext = re.sub('  ','',Confinedtext)
+print(SecondConfinedtext)
