@@ -4,3 +4,6 @@
 [submodule "Python/Tensorflow/TensorflowSubmodule"]
 	path = Python/Tensorflow/TensorflowSubmodule
 	url = https://github.com/donddog/models.git
+[submodule "Python/NLPKorean/konlpy"]
+	path = Python/NLPKorean/konlpy
+	url = https://github.com/konlpy/konlpy.git
