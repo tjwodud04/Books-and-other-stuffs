@@ -1,8 +1,8 @@
-﻿# Explanation Of this Part
+﻿# Explanation of this part
 
- Books&Following Folder : I use this folder frequently to write some code which are written in books
+ Books&Following Folder : Frequently follow some code written in books
  
- NLPKorean : copy files of konlpy package
+ NLPKorean : Submodule of konlpy package from github opens source which I fork
 
  Tensorflow : Submodule of Tensorflow from github open source which I fork
 
