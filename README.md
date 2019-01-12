@@ -18,4 +18,5 @@
   1. 모두의 딥러닝 (조태호 / 길벗 / https://book.naver.com/bookdb/book_detail.nhn?bid=12990945)
   2. 인공지능을 위한 수학 (이시카와 아키히코 / 프리렉 / https://book.naver.com/bookdb/book_detail.nhn?bid=14200387)
   3. 심층학습 (이안 굿펠로, 요슈아 벤지오, 에런 쿠빌 / 류광 역 / 제이펍 / https://book.naver.com/bookdb/book_detail.nhn?bid=14103770)
-  4. some books at wiki docs online
+  4. Python Snippets - 파이썬 조각 코드 모음집 (윤태호 / 위키독스 / https://wikidocs.net/book/536)
+  5. 딥러닝을 이용한 자연어 처리 입문 실습 (book is now still updating https://wikidocs.net/21703)
