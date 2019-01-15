@@ -7,3 +7,6 @@
 [submodule "Python/konlpy(NLPpythonPackage)/konlpy"]
 	path = Python/konlpy(NLPpythonPackage)/konlpy
 	url = https://github.com/konlpy/konlpy.git
+[submodule "Interview_Question_for_Beginner"]
+	path = Interview_Question_for_Beginner
+	url = https://github.com/JaeYeopHan/Interview_Question_for_Beginner.git
