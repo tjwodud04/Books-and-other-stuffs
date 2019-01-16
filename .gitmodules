@@ -1,9 +1,0 @@
-[submodule "Python/Tensorflow/Python/Tensorflow/models"]
-	path = Python/Tensorflow/Python/Tensorflow/models
-	url = https://github.com/donddog/models.git
-[submodule "Python/Tensorflow/tensorflow"]
-	path = Python/Tensorflow/tensorflow
-	url = https://github.com/tensorflow/tensorflow.git
-[submodule "Python/konlpy(NLPpythonPackage)/konlpy"]
-	path = Python/konlpy(NLPpythonPackage)/konlpy
-	url = https://github.com/konlpy/konlpy.git
