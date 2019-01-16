@@ -7,6 +7,3 @@
 [submodule "Python/konlpy(NLPpythonPackage)/konlpy"]
 	path = Python/konlpy(NLPpythonPackage)/konlpy
 	url = https://github.com/konlpy/konlpy.git
-[submodule "Python/konlpy"]
-	path = Python/konlpy
-	url = https://github.com/konlpy/konlpy.git
