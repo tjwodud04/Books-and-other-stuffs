@@ -7,6 +7,7 @@ https://wikidocs.net/21698
 
 from sklearn.feature_extraction.text import CountVectorizer
 from nltk.corpus import stopwords
+from sklearn.feature_extraction.text import TfidfVectorizer
 
 corpus = ['you know I want your love, because I love you.']
 vector = CountVectorizer()
@@ -21,7 +22,21 @@ print(vect1.vocabulary_, "\n")
 sw = stopwords.words("english")
 vect1 = CountVectorizer(stop_words =sw)
 print(vect1.fit_transform(text1).toarray())
-print(vect1.vocabulary_)
+print(vect1.vocabulary_, "\n")
 
 #----------------------------------------------------------------
 
+corpus = [
+    'you know I want your love',
+    'I like you',
+    'what should I do'
+]
+#vector = CountVectorizer()
+print(vector.fit_transform(corpus).toarray())
+print(vector.vocabulary_, "\n")
+
+#----------------------------------------------------------------
+
+tfidv = TfidfVectorizer().fit(corpus)
+print(tfidv.transform(corpus).toarray())
+print(tfidv.vocabulary_)
