@@ -1,7 +1,7 @@
 # Explanation of this folder
 
-- Bookname : Machine Learning °­ÀÇ³ëÆ® / ¹Ú¼öÁø / URL : https://wikidocs.net/book/587
-- Bookname : Python Snippets - ÆÄÀÌ½ã Á¶°¢ ÄÚµå ¸ğÀ½Áı / À±ÅÂÈ£ / URL : https://wikidocs.net/book/536
-- Bookname : µö ·¯´×À» ÀÌ¿ëÇÑ ÀÚ¿¬¾î Ã³¸® ÀÔ¹® / ¿¡µğ / URL : https://wikidocs.net/book/2155
-- Bookname : ¸ğµÎÀÇ µö·¯´× / Á¶ÅÂÈ£ / ±æ¹ş
-- Bookname : ÀÎ°øÁö´ÉÀ» À§ÇÑ ¼öÇĞ / ÀÌ½ÃÄ«¿Í ¾ÆÅ°È÷ÄÚ / ½Å»óÀç, ÀÌÁøÈñ / ÇÁ¸®·º
+- Bookname : Machine Learning ê°•ì˜ë…¸íŠ¸ / ë°•ìˆ˜ì§„ / URL: https://wikidocs.net/book/587
+- Bookname : Python Snippets - íŒŒì´ì¬ ì¡°ê° ì½”ë“œ ëª¨ìŒì§‘ / ìœ¤íƒœí˜¸ / URL : https://wikidocs.net/book/536
+- Bookname : ë”¥ ëŸ¬ë‹ì„ ì´ìš©í•œ ìì—°ì–´ ì²˜ë¦¬ ì…ë¬¸ / ì—ë”” / URL: https://wikidocs.net/book/2155
+- Bookname : ëª¨ë‘ì˜ ë”¥ëŸ¬ë‹ / ì¡°íƒœí˜¸ / ê¸¸ë²— URL: https://book.naver.com/bookdb/book_detail.nhn?bid=12990945
+- Bookname : ì¸ê³µì§€ëŠ¥ì„ ìœ„í•œ ìˆ˜í•™ / ì´ì‹œì¹´ì™€ ì•„í‚¤íˆì½” / ì‹ ìƒì¬, ì´ì§„í¬ / í”„ë¦¬ë ‰ URL: https://book.naver.com/bookdb/book_detail.nhn?bid=14200387
