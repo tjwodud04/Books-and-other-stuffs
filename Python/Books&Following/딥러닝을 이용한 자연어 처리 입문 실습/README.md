@@ -1,8 +1,8 @@
-# Following the book
-  (Bookname : µö·¯´×À» ÀÌ¿ëÇÑ ÀÚ¿¬¾î Ã³¸® ÀÔ¹® ½Ç½À(Not a completed book)
+ï»¿# Following the book
+  (Bookname : ë”¥ëŸ¬ë‹ì„ ì´ìš©í•œ ìì—°ì–´ ì²˜ë¦¬ ì…ë¬¸ ì‹¤ìŠµ(Not a completed book)
    URL : https://wikidocs.net/21703)
 
-¡Û Some Useful Sources to know about Regular Expression
+â—‹ Some Useful Sources to know about Regular Expression
   - https://www.machinelearningplus.com/python/python-regex-tutorial-examples/ 
   - https://docs.python.org/3.6/library/re.html#re.regex.search 
   - https://kimdoky.github.io/tech/2017/06/11/regular-2.html 

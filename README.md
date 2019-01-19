@@ -1,5 +1,7 @@
 ﻿# CodePractice
 
-- CodePractice/C/ProgrammingClass/ : Some codes when I had learned Computer Programming Class(undergraduated class)
+- C : Some codes when I had learned Computer Programming Class(undergraduated class)
 
-- CodePractice/Python : I'm following some python codes written at books. Plus, there are some scribbles about collecting data and submodules of konlpy, tensorflow
+- Python : I'm following some python codes written at books. Plus, there are some scribbles about collecting data
+
+- Intersting Papers: here are some papers that I feel interested
