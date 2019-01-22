@@ -1,4 +1,4 @@
-# Explanation of this part
+# Explanation
 
 - Books&Following Folder : Frequently follow some code written in books
 - Interview_Question_for_Beginner : Submodule of some tips from github opens source which I fork
