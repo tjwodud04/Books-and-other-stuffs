@@ -1,4 +1,4 @@
-﻿# CodePractice
+# CodePractice
 
 - C : Some codes when I had learned Computer Programming Class(undergraduated class)
 
