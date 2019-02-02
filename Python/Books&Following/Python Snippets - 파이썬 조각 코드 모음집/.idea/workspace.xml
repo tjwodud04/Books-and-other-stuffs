@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2a209b18-b768-4e5a-a36f-1a22fe8939ea" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/Python Snippets - 파이썬 조각 코드 모음집.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Python Snippets - 파이썬 조각 코드 모음집.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="2a209b18-b768-4e5a-a36f-1a22fe8939ea" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -16,17 +13,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Garbage Collection.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="602">
+            <state relative-caret-position="564">
               <caret line="46" column="6" selection-start-line="46" selection-start-column="6" selection-end-line="46" selection-end-column="6" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/../FollowingTensorflowTutorial/Garbage Collection.py">
+        <entry file="file://$PROJECT_DIR$/../FollowingTensorflowTutorial/TensorflowExample01.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="355">
-              <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+            <state relative-caret-position="285">
+              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
             </state>
           </provider>
         </entry>
@@ -61,7 +58,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -73,6 +69,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -167,18 +164,18 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="7835fd67-2e0d-4eff-8e41-d660f65b1019" name="Default Changelist" comment="" />
+      <changelist id="2a209b18-b768-4e5a-a36f-1a22fe8939ea" name="Default Changelist" comment="" />
       <created>1548233393686</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1548233393686</updated>
     </task>
-    <task id="LOCAL-00001" summary=" following some codes from a book">
-      <created>1548420167948</created>
+    <task id="LOCAL-00001" summary="following codes about tensorflow example">
+      <created>1549030462154</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1548420167948</updated>
+      <updated>1549030462154</updated>
     </task>
     <task id="LOCAL-00002" summary=" following some codes from a book">
       <created>1548680773900</created>
@@ -187,10 +184,12 @@
       <option name="project" value="LOCAL" />
       <updated>1548680773900</updated>
     </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="974" height="1087" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2863248" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -210,6 +209,10 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="following codes about tensorflow example" />
+    <option name="LAST_COMMIT_MESSAGE" value="following codes about tensorflow example" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Cython의 간단한 예제.py" />
@@ -237,24 +240,25 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Gabage Collection.py">
+    <entry file="file://$PROJECT_DIR$/Gabage Collection.py" />
+    <entry file="file://$PROJECT_DIR$/../FollowingTensorflowTutorial/Garbage Collection.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
-          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Garbage Collection.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="602">
+        <state relative-caret-position="564">
           <caret line="46" column="6" selection-start-line="46" selection-start-column="6" selection-end-line="46" selection-end-column="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../FollowingTensorflowTutorial/Garbage Collection.py">
+    <entry file="file://$PROJECT_DIR$/../FollowingTensorflowTutorial/TensorflowExample01.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="355">
-          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+        <state relative-caret-position="285">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
         </state>
       </provider>
     </entry>
