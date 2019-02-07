@@ -30,5 +30,24 @@ reverse_word_index = dict([(value, key) for (key, value) in word_index.items()])
 def decode_review(text):
     return ' '.join([reverse_word_index.get(i, '?') for i in text])
 
-decode_review(train_data[0])
+print(decode_review(train_data[0]), "\n")
+
+train_data = keras.preprocessing.sequence.pad_sequences(train_data, value=word_index["<PAD>"], padding='post', maxlen=256)
+test_data = keras.preprocessing.sequence.pad_sequences(test_data, value=word_index["<PAD>"], padding='post', maxlen=256)
+
+print(len(train_data[0]), len(train_data[1]), "\n")
+
+print(train_data[0], "\n")
+
+vocab_size = 10000
+
+model = keras.Sequential()
+model.add(keras.layers.Embedding(vocab_size, 16))
+model.add(keras.layers.GlobalAveragePooling1D())
+model.add(keras.layers.Dense(16, activation=tf.nn.relu))
+model.add(keras.layers.Dense(1, activation=tf.nn.sigmoid))
+
+print(model.summary(), "\n")
+
+model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
 
