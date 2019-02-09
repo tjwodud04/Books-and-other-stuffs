@@ -25,7 +25,7 @@ req.encoding = 'utf-8'
 
 html = req.text
 soup = BeautifulSoup(html, 'html.parser')
-posts = soup.findAll('div.sect-showtimes')
+posts = soup.findAll('div.sect-schedule')
 
 def remove_html_tags(data):
     p = re.compile(r'<.*?>')

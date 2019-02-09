@@ -1,5 +1,6 @@
 '''
 https://www.tensorflow.org/tutorials/keras/basic_text_classification
+Text classification with movie reviews
 '''
 
 from __future__ import absolute_import, division, print_function
@@ -51,3 +52,44 @@ print(model.summary(), "\n")
 
 model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
 
+x_val = train_data[:10000]
+partial_x_train = train_data[10000:]
+
+y_val = train_labels[:10000]
+partial_y_train = train_labels[10000:]
+
+history = model.fit(partial_x_train, partial_y_train, epochs=30, batch_size=512, validation_data=(x_val, y_val), verbose=1)
+
+results = model.evaluate(test_data, test_labels)
+
+print(results, "\n")
+
+history_dict = history.history
+print(history_dict.keys(), "\n")
+
+import matplotlib.pyplot as plt
+
+acc = history_dict['acc']
+val_acc = history_dict['val_acc']
+loss = history_dict['loss']
+val_loss = history_dict['val_loss']
+
+epochs = range(1, len(acc) + 1)
+
+plt.plot(epochs, loss, 'bo', label='Training loss')
+plt.plot(epochs, val_loss, 'b', label='Validation loss')
+plt.title('Training and validation loss')
+plt.xlabel('Epochs')
+plt.ylabel('Loss')
+plt.legend()
+plt.show()
+
+plt.clf()
+
+plt.plot(epochs, acc, 'bo', label='Training acc')
+plt.plot(epochs, val_acc, 'b', label='Validation acc')
+plt.title('Training and validation accuracy')
+plt.xlabel('Epochs')
+plt.ylabel('Loss')
+plt.legend()
+plt.show()
