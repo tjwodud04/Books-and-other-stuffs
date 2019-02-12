@@ -29,3 +29,13 @@ for image_batch, label_batch in image_data:
     break
 
 classifier_url = "https://tfhub.dev/google/imagenet/mobilenet_v2_100_224/classification/2"
+
+def classifier(x):
+    classifier_module = hub.Module(classifier_url)
+    return classifier_module(x)
+
+IMAGE_SIZE = hub.get_expected_image_size(hub.Module(classifier_url))
+
+classifier_layer = layers.Lamda(classifier, input_shape = IMAGE_SIZE+[3])
+classifier_model = tf.keras.Sequential([classifier_layer])
+classifier_model.summary()
