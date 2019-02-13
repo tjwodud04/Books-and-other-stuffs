@@ -39,3 +39,23 @@ IMAGE_SIZE = hub.get_expected_image_size(hub.Module(classifier_url))
 classifier_layer = layers.Lamda(classifier, input_shape = IMAGE_SIZE+[3])
 classifier_model = tf.keras.Sequential([classifier_layer])
 classifier_model.summary()
+
+image_data = image_generator.flow_from_directory(str(data_root), target_size=IMAGE_SIZE)
+for image_batch, label_batch in image_data:
+    print("Image batch shape: ", image_batch.shape)
+    print("Label batch shape: ", label_batch.shape)
+    break
+
+import tensorflow.keras.backend as K
+sess = K.get_sessiong()
+init = tf.global_variables_initializer()
+
+sess.run(init)
+
+import numpy as np
+import PIL.Image as Image
+
+grace_hopper = tf.keras.utils.get_file('image.jpg','https://storage.googleapis.com/download.tensorflow.org/example_images/grace_hopper.jpg')
+grace_hopper = Image.open(grace_hopper).resize(IMAGE_SIZE)
+grace_hopper
+
