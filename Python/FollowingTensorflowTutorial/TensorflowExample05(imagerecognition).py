@@ -57,5 +57,14 @@ import PIL.Image as Image
 
 grace_hopper = tf.keras.utils.get_file('image.jpg','https://storage.googleapis.com/download.tensorflow.org/example_images/grace_hopper.jpg')
 grace_hopper = Image.open(grace_hopper).resize(IMAGE_SIZE)
-grace_hopper
+print(grace_hopper, "\n")
+
+grace_hopper = np.array(grace_hopper)/255.0
+print(grace_hopper.shape, "\n")
+
+result = classifier_model.predict(grace_hopper[np.newaxis, ...])
+print(result.shape, "\n")
+
+predicted_class = np.argmax(result[0], axis=-1)
+print(predicted_class, "\n")
 
