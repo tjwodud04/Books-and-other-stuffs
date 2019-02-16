@@ -36,7 +36,7 @@ def classifier(x):
 
 IMAGE_SIZE = hub.get_expected_image_size(hub.Module(classifier_url))
 
-classifier_layer = layers.Lamda(classifier, input_shape = IMAGE_SIZE+[3])
+classifier_layer = layers.Lambda(classifier, input_shape = IMAGE_SIZE+[3])
 classifier_model = tf.keras.Sequential([classifier_layer])
 classifier_model.summary()
 
@@ -47,7 +47,7 @@ for image_batch, label_batch in image_data:
     break
 
 import tensorflow.keras.backend as K
-sess = K.get_sessiong()
+sess = K.get_session()
 init = tf.global_variables_initializer()
 
 sess.run(init)
@@ -57,7 +57,7 @@ import PIL.Image as Image
 
 grace_hopper = tf.keras.utils.get_file('image.jpg','https://storage.googleapis.com/download.tensorflow.org/example_images/grace_hopper.jpg')
 grace_hopper = Image.open(grace_hopper).resize(IMAGE_SIZE)
-print(grace_hopper, "\n")
+grace_hopper
 
 grace_hopper = np.array(grace_hopper)/255.0
 print(grace_hopper.shape, "\n")
@@ -67,4 +67,12 @@ print(result.shape, "\n")
 
 predicted_class = np.argmax(result[0], axis=-1)
 print(predicted_class, "\n")
+
+labels_path = tf.keras.utils.get_file('ImageNetLabels.txt','https://storage.googleapis.com/download.tensorflow.org/data/ImageNetLabels.txt')
+imagenet_labels = np.array(open(labels_path).read().splitlines())
+
+plt.imshow(grace_hopper)
+plt.axis('off')
+predicted_class_name = imagenet_labels[predicted_class]
+_ = plt.title("Prediction: " + predicted_class_name)
 
