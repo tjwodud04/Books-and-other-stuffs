@@ -76,3 +76,17 @@ plt.axis('off')
 predicted_class_name = imagenet_labels[predicted_class]
 _ = plt.title("Prediction: " + predicted_class_name)
 
+result_batch = classifier_model.predict(image_batch)
+
+labels_batch = imagenet_labels[np.argmax(result_batch, axis=1)]
+print(labels_batch, "\n")
+
+plt.figure(figsize=(10,9))
+for n in range(30):
+    plt.subplot(6,5,n+1)
+    plt.imshow(image_batch[n])
+    plt.title(image_batch[n])
+    plt.title(labels_batch[n])
+    plt.axis('off')
+
+_ = plt.suptitle("ImageNet predictions")
