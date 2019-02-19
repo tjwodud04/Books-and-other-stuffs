@@ -145,7 +145,7 @@ with imageio.get_writer('dcgan.gif', mode='I') as writer:
     writer.append_data(image)
 os.system('cp dcgan.gif dcgan.gif.png')
 
-display.Image(filename='dcgan.gif.png')
+display.Image(filename="dcgan.gif.png")
 
 #from google.colab import files
 #files.download('dcgan.gif')
