@@ -11,3 +11,7 @@ path_to_file = tf.keras.utils.get_file('shakespeare.txt', 'https://storage.googl
 
 text = open(path_to_file, 'rb').read().decode(encoding='utf-8')
 print('Length of text: {} characters'.format(len(text)), "\n")
+print(text[:250])
+
+vocab = sorted(set(text))
+print('{} unique characters'.format(len(vocab)), "\n")
