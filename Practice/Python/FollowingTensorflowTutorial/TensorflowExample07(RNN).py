@@ -15,3 +15,10 @@ print(text[:250])
 
 vocab = sorted(set(text))
 print('{} unique characters'.format(len(vocab)), "\n")
+
+char2idx = {u:i for i, u in enumerate(vocab)}
+idx2char = np.array(vocab)
+
+text_as_int = np.array([char2idx[c] for c in text])
+
+print('{')
