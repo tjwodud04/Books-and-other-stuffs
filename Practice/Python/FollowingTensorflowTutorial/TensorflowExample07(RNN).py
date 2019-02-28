@@ -22,3 +22,9 @@ idx2char = np.array(vocab)
 text_as_int = np.array([char2idx[c] for c in text])
 
 print('{')
+for char,_ in zip(char2idx, range(20)):
+    print(' {:4s}: {:3d},'.format(repr(char), char2idx[char]))
+print(' ...\n}')
+
+print('{} ---- characters mapped to int ---- > {}'.format(repr(text[:13]), text_as_int[:13]))
+
