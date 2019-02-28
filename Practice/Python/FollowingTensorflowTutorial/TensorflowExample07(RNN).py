@@ -28,3 +28,16 @@ print(' ...\n}')
 
 print('{} ---- characters mapped to int ---- > {}'.format(repr(text[:13]), text_as_int[:13]))
 
+seq_length = 100
+exmples_per_epoch = len(text)
+
+char_dataset = tf.data.Dataset.from_tensor_slices(text_as_int)
+
+for i in char_dataset.take(5):
+    print(idx2char[i.numpy()])
+
+sequences = char_dataset.batch(seq_length+1, drop_remainder=True)
+
+for item in sequences.take(5):
+    print(repr(''.join(idx2char[item.numpy()])))
+
