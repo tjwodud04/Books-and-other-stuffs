@@ -60,3 +60,10 @@ for input_example, target_example in dataset.take(1):
     print('Input data: ', repr(''.join(idx2char[input_example.numpy()])))
     print('Target data: ', repr(''.join(idx2char[target_example.numpy()])))
 
+for i, (input_idx, target_idx) in enumerate(zip(input_example[:5], target_example[:5])):
+    print("Setp {:4d}".format(i))
+    print(" input: {} ({:s})".format(input_idx, repr(idx2char[input_idx])))
+    print(" expected output: {} ({:s})".format(target_idx, repr(idx2char[target_idx])))
+
+print("\n")
+
