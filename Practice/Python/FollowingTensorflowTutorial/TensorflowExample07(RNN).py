@@ -67,3 +67,36 @@ for i, (input_idx, target_idx) in enumerate(zip(input_example[:5], target_exampl
 
 print("\n")
 
+BATCH_SIZE = 64
+setps_per_epoch = exmples_per_epoch
+
+BUFFER_SIZE = 10000
+
+dataset = dataset.shuffle(BUFFER_SIZE).batch(BATCH_SIZE, drop_remainder=True)
+
+print(dataset, "\n")
+
+vocab_size = len(vocab)
+embedding_dim = 256
+rnn_units = 1024
+
+if tf.test.is_gpu_available():
+    rnn = tf.keras.layers.CuDNNGRU
+else:
+    import functools
+    rnn = functools.partial(
+        tf.keras.layers.GRU, recurrent_activation='sigmoid')
+
+def build_model(vocab_size, embedding_dim, rnn_units, batch_size):
+    model = tf.keras.Sequential([
+        tf.keras.layers.Embedding(vocab_size,embedding_dim, batch_input_shape=[batch_size, None]),
+        rnn(rnn_units, return_sequences=True, recurrent_initializer='glorot_uniform', stateful=True),
+        tf.keras.layers.Dense(vocab_size)
+    ])
+    return model
+
+model = build_model(
+    vocab_size = len(vocab),
+    embedding_dim=embedding_dim,
+    rnn_units=rnn_units,
+    batch_size=BATCH_SIZE)
