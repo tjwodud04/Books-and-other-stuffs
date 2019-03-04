@@ -1,6 +1,5 @@
-﻿# Following the book
-  (Bookname : 딥러닝을 이용한 자연어 처리 입문 실습(Not a completed book)
-   URL : https://wikidocs.net/21703)
+﻿# Book Info
+  [딥러닝을 이용한 자연어 처리 입문 실습](https://wikidocs.net/21703)
 
 ○ Some Useful Sources to know about Regular Expression
   - https://www.machinelearningplus.com/python/python-regex-tutorial-examples/ 
