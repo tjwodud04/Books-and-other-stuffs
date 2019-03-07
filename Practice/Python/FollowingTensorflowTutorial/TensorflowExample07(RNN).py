@@ -100,3 +100,19 @@ model = build_model(
     embedding_dim=embedding_dim,
     rnn_units=rnn_units,
     batch_size=BATCH_SIZE)
+
+for input_example_batch, target_example_batch in dataset.take(1):
+    example_batch_predictions = model(input_example_batch)
+    print(example_batch_predictions.shape, "#(batch_size, sequence_length, vocab_size)")
+
+print(model.summary(), "\n")
+
+sampled_indices = tf.random.categorical(example_batch_predictions[0], num_samples=1)
+sampled_indices = tf.squeeze(sampled_indices,axis=1).numpy()
+
+print(sampled_indices, "\n")
+
+print("Input: \n", repr("".join(idx2char[input_example_batch[0]])))
+print()
+print("Next Char Predictions: \n", repr("".join(idx2char[sampled_indices ])))
+
