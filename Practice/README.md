@@ -1,14 +1,14 @@
-## C/ProgrammingClass 
-- Some codes when I had learned Computer Programming Class(undergraduated class)
+- C/ProgrammingClass 
+: Some codes when I had learned Computer Programming Class(undergraduated class)
 
-## Chatbot Practice
-- samples to challenge like a project
+- Chatbot Practice
+: samples to challenge like a project
 
-## CSS/CSSsamples 
-- old samples
+- CSS/CSSsamples 
+: old samples
 
-## Intersting Papers 
-- Some papers feeling interested
+- Intersting Papers 
+: Some papers feeling interested
 
-## Python
-- Following some python codes written at books. Plus, there are some scribbles about collecting data
+- Python
+: Following some python codes written at books. Plus, there are some scribbles about collecting data
