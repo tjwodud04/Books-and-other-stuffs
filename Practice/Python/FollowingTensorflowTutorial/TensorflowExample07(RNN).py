@@ -23,17 +23,15 @@ text_as_int = np.array([char2idx[c] for c in text])
 
 print('{')
 for char,_ in zip(char2idx, range(20)):
-    print(' {:4s}: {:3d},'.format(repr(char), char2idx[char]))
+    print('{:4s}: {:3d},'.format(repr(char), char2idx[char]))
 print(' ...\n}')
-
 print("\n")
 
 print('{} ---- characters mapped to int ---- > {}'.format(repr(text[:13]), text_as_int[:13]))
-
 print("\n")
 
 seq_length = 100
-exmples_per_epoch = len(text)
+examples_per_epoch = len(text)
 
 char_dataset = tf.data.Dataset.from_tensor_slices(text_as_int)
 
@@ -68,7 +66,7 @@ for i, (input_idx, target_idx) in enumerate(zip(input_example[:5], target_exampl
 print("\n")
 
 BATCH_SIZE = 64
-setps_per_epoch = exmples_per_epoch
+steps_per_epoch = examples_per_epoch
 
 BUFFER_SIZE = 10000
 
@@ -108,11 +106,54 @@ for input_example_batch, target_example_batch in dataset.take(1):
 print(model.summary(), "\n")
 
 sampled_indices = tf.random.categorical(example_batch_predictions[0], num_samples=1)
-sampled_indices = tf.squeeze(sampled_indices,axis=1).numpy()
+sampled_indices = tf.squeeze(sampled_indices,axis=-1).numpy()
 
 print(sampled_indices, "\n")
 
 print("Input: \n", repr("".join(idx2char[input_example_batch[0]])))
 print()
 print("Next Char Predictions: \n", repr("".join(idx2char[sampled_indices ])))
+print("\n")
 
+def loss(labels, logits):
+    return tf.keras.losses.sparse_categorical_crossentropy(labels,logits, from_logits=True)
+
+example_batch_loss = loss(target_example_batch, example_batch_predictions)
+print("Prediction shape: ", example_batch_predictions.shape, " # (batch_size, sequence_length, vocab_size)")
+print("scalar_loss: ", example_batch_loss.numpy().mean())
+print("\n")
+
+model.compile(
+    optimizer=tf.train.AdamOptimizer(),
+    loss= loss
+)
+
+checkpoint_dir = './training_checkpoints'
+checkpoint_prefix = os.path.join(checkpoint_dir, "ckpt_{epoch}")
+
+checkpoint_callback = tf.keras.callbacks.ModelCheckpoint(
+    filepath=checkpoint_prefix,
+    save_weights_only=True
+)
+
+EPOCHS = 3
+history = model.fit(dataset.repeat(), epochs=EPOCHS, steps_per_epoch=steps_per_epoch, callbacks=[checkpoint_callback])
+print(tf.train.latest_checkpoint(checkpoint_dir))
+print("\n")
+
+model = build_model(vocab_size, embedding_dim, rnn_units, batch_size=1)
+model.load_weights(tf.train.latest_checkpoint(checkpoint_dir))
+model.build(tf.TensorShape([1, None]))
+print(model.summary())
+print("\n")
+
+def generate_text(model, start_string):
+    num_generate = 1000
+    input_eval = [char2idx[s] for s in start_string]
+    input_eval = tf.expand_dims(input_eval, 0)
+    text_generated = []
+    temperature = 1.0
+    model.reset_states()
+    for i in range(num_generate):
+        predictions = model(input_eval)
+        
