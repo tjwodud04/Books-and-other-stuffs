@@ -1,6 +1,6 @@
 from __future__ import absolute_import, division, print_function
 
-import tensorflow as tf
+import tensorflow_gpu as tf
 tf.enable_eager_execution()
 
 import numpy as np
@@ -135,7 +135,7 @@ checkpoint_callback = tf.keras.callbacks.ModelCheckpoint(
     filepath=checkpoint_prefix,
     save_weights_only=True
 )
-
+#with tf.device('gpu:0'):
 EPOCHS = 3
 history = model.fit(dataset.repeat(), epochs=EPOCHS, steps_per_epoch=steps_per_epoch, callbacks=[checkpoint_callback])
 print(tf.train.latest_checkpoint(checkpoint_dir))
@@ -164,4 +164,24 @@ def generate_text(model, start_string):
 
 print(generate_text(model, start_string=u"ROMEO: "))
 print("\n")
+
+model = build_model(
+    vocab_size = len(vocab),
+    embedding_dim=embedding_dim,
+    rnn_units=rnn_units,
+    batch_size=BATCH_SIZE
+)
+
+optimizer = tf.train.AdamOptimizer()
+
+EPOCHS = 1
+
+for epoch in range(EPOCHS):
+    start = time.time()
+    hidden = model.reset_states()
+
+    for (batch_n, (inp, target)) in enumerate(dataset):
+        with tf.GradientTape() as tape:
+            predictions = model(inp)
+            loss = tf.losses.sparse_softmax_cross_entropy(target, predictions)
 
