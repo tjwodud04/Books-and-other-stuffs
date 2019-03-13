@@ -1,6 +1,6 @@
 from __future__ import absolute_import, division, print_function
 
-import tensorflow_gpu as tf
+import tensorflow as tf
 tf.enable_eager_execution()
 
 import numpy as np
@@ -101,7 +101,7 @@ model = build_model(
 
 for input_example_batch, target_example_batch in dataset.take(1):
     example_batch_predictions = model(input_example_batch)
-    print(example_batch_predictions.shape, "#(batch_size, sequence_length, vocab_size)")
+    print(example_batch_predictions.shape, "# (batch_size, sequence_length, vocab_size)")
 
 print(model.summary(), "\n")
 
@@ -185,3 +185,17 @@ for epoch in range(EPOCHS):
             predictions = model(inp)
             loss = tf.losses.sparse_softmax_cross_entropy(target, predictions)
 
+        grads = tape.gradient(loss, model.trainable_variables)
+        optimizer.apply_gradients(zip(grads, model.trainable_variables))
+
+        if batch_n % 100 == 0:
+            template = 'Epoch {} Batch {} Loss {:.4f}'
+            print(template.format(epoch+1, batch_n, loss))
+
+    if (epoch + 1) % 5 == 0:
+        model.save_weights(checkpoint_prefix.format(epoch=epoch))
+
+    print('Epoch {} Loss {:.4f}'.format(epoch+1, loss))
+    print('Time taken for 1 epoch {} sec\n'.format(time.time() - start))
+
+model.save_weights(checkpoint_prefix.format(epoch=epoch))
