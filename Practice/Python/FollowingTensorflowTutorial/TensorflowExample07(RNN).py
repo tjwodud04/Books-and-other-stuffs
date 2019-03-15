@@ -135,9 +135,13 @@ checkpoint_callback = tf.keras.callbacks.ModelCheckpoint(
     filepath=checkpoint_prefix,
     save_weights_only=True
 )
-#with tf.device('gpu:0'):
+
+# tf.config.gpu.set_per_process_memory_growth(enabled='')
+# tf.config.set_soft_device_placement(True)
+# tf.debugging.set_log_device_placement(True)
+
 EPOCHS = 3
-history = model.fit(dataset.repeat(), epochs=EPOCHS, steps_per_epoch=steps_per_epoch, callbacks=[checkpoint_callback])
+history = model.fit(dataset.repeat(), epochs=EPOCHS, steps_per_epoch = steps_per_epoch, callbacks = [checkpoint_callback])
 print(tf.train.latest_checkpoint(checkpoint_dir))
 print("\n")
 
