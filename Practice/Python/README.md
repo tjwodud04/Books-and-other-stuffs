@@ -1,5 +1,3 @@
-# Explanation
-
 - Books&Following : Following some codes written in books
 
 - botsample(practice) : Try some chatbot system which I feel interested
