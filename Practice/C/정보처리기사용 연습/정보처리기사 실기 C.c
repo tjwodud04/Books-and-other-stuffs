@@ -95,3 +95,192 @@ main()
    }
    printf("%d, %d\n", even, odd);
 }
+
+//009
+#include <stdio.h>
+main()
+{
+   int a = 15, b;
+   if (a > 10)
+    b = a - 10;
+   b = b + (10 - b);
+   printf("%d\n", b);
+}
+
+//010
+#include <stdio.h>
+main()
+{
+  int a = 10, b = 20, cha;
+  if(a > b)
+    cha = a - b;
+  else
+    cha = b - a;
+  printf("%d\b", cha);
+}
+
+//011
+#include<stdio.h>
+
+main()
+{
+  int jum = 85;
+  if(jum >= 90) {
+      printf("the grade is A.\n");
+  }
+  else if(jum >= 80) {
+      printf("the grade is B.\n");
+  }
+  else if(jum >= 70) {
+      printf("the grade is C.\n");
+  }
+  else if(jum >= 60) {
+      printf("the grade is D.\n");
+  }
+  else {
+      printf("the grade is F.\n");
+  }
+}
+
+//012
+#include<stdio.h>
+
+main()
+{
+  int i, hap = 0;
+  for (i = 1; i <= 10; ++i)
+  {
+      hap += i;
+  }
+  printf("%d, %d \n", i, hap);
+}
+
+//013
+#include<stdio.h>
+
+main()
+{
+ int i = 0, hap = 0;
+ while (i < 10)
+ {
+     i++;
+     hap += i;
+ }
+ printf("%d, %d\n", i, hap);
+}
+
+//014
+#include<stdio.h>
+
+main()
+{
+ int i = 0, hap = 0;
+ do
+ {
+     i++;
+     hap += i;
+ } while(i < 10);
+ printf("%d, %d\n", i, hap);
+}
+
+//015
+#include<stdio.h>
+
+main()
+{
+ int i = 0, hap = 0;
+ while (1)
+ {
+     i++;
+     if (i > 10)
+        break;
+     if (i % 5 == 0)
+        continue;
+     hap += i;
+ }
+ printf("%d, %d\n", i, hap);
+}
+
+//016
+#include<stdio.h>
+
+main()
+{
+    int a[3][4];
+    int i,j,k = 0;
+    for (i = 0; i < 3; i++)
+    {
+        for (j = 0; j < 4; j++)
+        {
+            k++;
+            a[i][j] = k;
+        }
+    }
+}
+
+//017
+#include<stdio.h>
+
+main()
+{
+    int a[5];
+    int i;
+    for (i = 0; i < 5; i++)
+        a[i] = i + 10;
+    for (i = 0; i < 5; i++)
+        printf("%d", a[i]);
+}
+
+//018
+#include<stdio.h>
+
+main()
+{
+    int a[5];
+    int i;
+    int *p;
+    
+    for (i = 0; i < 5; i++)
+        a[i] = i + 10;
+    p = a;
+    for (i = 0; i < 5; i++)
+        printf("%d", *(p+i));
+}
+
+//019
+#include<stdio.h>
+
+struct sawon
+{
+    char name[10];
+    char jikwi[10];
+    int pay;
+};
+
+struct sawon data;
+
+main()
+{
+    printf("name: ");
+    scanf("%s", data.name);
+    printf("title: ");
+    scanf("%s", data.jikwi);
+    printf("pay: ");
+    scanf("%d", data.pay);
+    
+    printf("\n\n");
+    
+    printf("name : %s\n", data.name);
+    printf("title : %s\n", data.jikwi);
+    printf("pay : %d", data.pay);
+}
+
+//020
+#include<stdio.h>
+
+int main() {
+   int x=10;
+   int y=25;
+   int z=x+y;
+   printf("Sum of x+y = %i", z);
+}
