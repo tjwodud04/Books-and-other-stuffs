@@ -304,3 +304,121 @@ int i, j;
 }
 
 //022
+#include <stdio.h>
+
+func(i,j);
+
+main() {
+    int a =3, b = 12;
+    a = func(a,b);
+    printf("%d, %d\n", a, b);
+}
+
+func(i,j)
+int i, j;
+{
+    i *= 3;
+    j /= 3;
+    printf("%d, %d\n", i,j);
+    return i;
+}
+
+//023
+#include <stdio.h>
+
+void func(int *i, int *j);
+
+main() {
+    int a =3, b = 12;
+    func(&a,&b);
+    printf("%d, %d\n", a, b);
+}
+
+void func(i,j)
+int *i, *j;
+{
+    *i *= 3;
+    *j /= 3;
+    printf("%d, %d\n", *i,*j);
+}
+
+//024
+#include <stdio.h>
+
+main()
+{
+    printf("%d", factorial(5));
+}
+
+factorial(int n) {
+    if (n <= 1)
+        return 1;
+    else
+        return n * factorial(n-1);
+}
+
+//025
+#include <stdio.h>
+
+int add(int i, int j) {
+    return i + j;
+}
+
+main() {
+    int i = 10, j = 5, result;
+    int (*pf)(int, int);
+    pf = add;
+    result = pf(i,j);
+    printf("%d", result);
+}
+
+//026
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+main() {
+    printf("%f\n", pow(2,3));
+    printf("%f\n", sqrt(25));
+    printf("%d\n", abs(-20));
+    char a[] = "ad";
+    char b[] = "ac";
+    printf("%d\n", strcmp(a,b));
+    strcpy(a,b);
+    printf("%d\n", strcmp(a,b));
+    char c[] = "123";
+    char d[] = "456";
+    printf("%d\n", atoi(c) + atoi(d));
+    char e[] = "12.3";
+    char f[] = "45.6";
+    printf("%f\n", atof(e) + atof(f));
+}
+
+//027
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+main() {
+   int n = 0;
+   srand(time(NULL));
+   while(n != 1)
+   {
+       n = rand()%6 + 1;
+       printf("%d\n",n);
+   }
+}
+
+//산기 예제
+#include<stdio.h>
+
+int main() {
+   int i = 10, j = 10, k = 30;
+   i /= j;
+   j -= i;
+   k %= j;
+   printf("%d, %d, %d\n", i,j,k);
+}
+
+//
