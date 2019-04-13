@@ -102,3 +102,85 @@ main () {
         small = nmg;
     }
 }
+
+//005
+#include <stdio.h>
+
+main () {
+    int b, mok, nmg, i;
+    int a[100];
+    scanf("%d", &b);
+    int c = 0, d = -1;
+
+    while (1) {
+        c++;
+        if (c <= b) {
+            mok = b /c;
+            nmg = b - mok * c;
+            if (nmg == 0) {
+                d++;
+                a[d] = c;
+            }
+        }
+        else {
+            printf("%d", b);
+            for (i = 0; i <= d; i++)
+                printf("%d", a[i]);
+            break;
+        }
+    }   
+}
+
+//006
+#define FIND 7
+#include <stdio.h>
+
+main () {
+    int i,j,k,L,m;
+    int a[10];
+    i = -1;
+
+    do {
+        i++;
+        scanf("%d", &a[i]);
+    } while (i < 9);
+
+    j = 9;
+
+    for (k = 0; k <= 9; k++) {
+        if (a[k] >= FIND)
+            L = a[k] - FIND;
+        else
+            L = FIND - a[k];
+        if (L <= j) {
+            j = L;
+            m = a[k];
+        }
+    }
+    printf("%d", m);
+}
+
+//007
+#include <stdio.h>
+
+main () {
+    int m,n,x,s;
+    int k[10] = {1,2,3,4,7,6,8,9,3,6};
+    m = 9;
+    n = -1;
+
+    do {
+        n++;
+        if(k[n] < 5)
+            x = 5 - k[n];
+        else {
+            x = k[n] -5;
+        }
+        if (m > x) {
+            m = x;
+            s = k[n];
+        }       
+    }while (n < 9);
+    
+    printf("%d", s);
+}
