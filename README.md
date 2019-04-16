@@ -1,2 +1,2 @@
 ## Practice 
-- Some codes for study
+- Some codes for self-study
