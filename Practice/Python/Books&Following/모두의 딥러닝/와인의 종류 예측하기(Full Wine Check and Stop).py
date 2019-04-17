@@ -1,11 +1,10 @@
 from keras.models import Sequential
 from keras.layers import Dense
-from keras.callbacks import ModelCheckpoint
+from keras.callbacks import ModelCheckpoint, EarlyStopping
 
 import pandas as pd
 import numpy
 import os
-import matplotlib.pyplot as plt
 import tensorflow as tf
 
 seed = 0
@@ -14,7 +13,6 @@ tf.set_random_seed(seed)
 
 df_pre = pd.read_csv('wine.csv', header=None)
 df = df_pre.sample(frac=0.15)
-
 dataset = df.values
 X = dataset[:,0:12]
 Y = dataset[:,12]
@@ -34,12 +32,7 @@ if not os.path.exists(MODEL_DIR):
 modelpath = "./model/{epoch:02d}-{val_loss:.4f}.hdf5"
 checkpointer = ModelCheckpoint(filepath=modelpath, monitor='val_loss', verbose=1, save_best_only=True)
 
-history = model.fit(X, Y, validation_split=0.33, epochs=3500, batch_size=500)
+early_stopping_callback = EarlyStopping(monitor='val_loss', patience=100)
 
-y_vloss = history.history['val_loss']
-y_acc = history.history['acc']
-x_len = numpy.arange(len(y_acc))
-plt.plot(x_len, y_vloss, "o", c="red", markersize=3)
-plt.plot(x_len, y_acc, "o", c="blue", markersize=3)
+model.fit(X, Y, validation_split=0.2, epochs=3500, batch_size=500, verbose=0, callbacks=[early_stopping_callback, checkpointer])
 
-plt.show()
