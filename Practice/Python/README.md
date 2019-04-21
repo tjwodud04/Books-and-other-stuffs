@@ -1,11 +1,9 @@
 - Books&Following : Following some codes written in books
 
-- botsample(practice) : Try some chatbot system which I feel interested
+- Bots&WebCrawling Scribbles : Some scribbles about Crawling and chatbots
 
 - FollowingTensorflowTutorial : Following some code written at Tensorflow website
 
 - Interview_Question_for_Beginner : Submodule of some tips from github opens source which I fork
 
-- WebCrawling : Kind of scribbles which I write rarely to practice Data Crawling
-
-- materials' at School : Works or codes while in school.
+- materials' at School : Works or codes while at school.
