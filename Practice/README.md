@@ -10,7 +10,7 @@
 - Intersting Papers 
 : Some papers feeling interested
 
-- JAVA 정보처리기사 연습용
+- JAVA 정보처리기사 연습용(Past)
 : Short codes for preparing a test
 
 - Python
