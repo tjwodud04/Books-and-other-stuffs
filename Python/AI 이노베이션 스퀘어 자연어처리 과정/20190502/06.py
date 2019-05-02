@@ -2,7 +2,7 @@ import requests
 
 #header = {"user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.108 Safari/537.36"}
 
-url = "http://pythonscraping.com/pages/cookies/welcome.php"
+url = " http://timetime.kr/user/login"
 
 def download(url, params={}, retries=3):
     resp = None
@@ -21,21 +21,6 @@ def download(url, params={}, retries=3):
 
     return resp
 
-#html = download(url, {"firstname":"1234", "lastname":"1234"})
-html = requests.post(url,{"username":"1234", "password":"password"} )
-#print(html.request.headers)
-print(html.request.body)
-#print(html.text)
-print(html.cookies.get_dict())
-#requests.request()
-html = requests.get(url, cookies=html.cookies)
-print(html.text)
+html = requests.post(url,{"username":"donddog", "password":"12345678"} )
 
-session = requests.Session()
-html = session.post(url, {"username":"1234", "password":"password"})
-
-print(html.request.body)
-print(html.text)
-
-html = session.post(url)
 print(html.text)

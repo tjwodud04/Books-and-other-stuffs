@@ -24,6 +24,6 @@ def download(url, params={}, retries=3):
 html = download("https://www.crawler-test.com/status_codes/status_500")
 #print(html.text, html.content)
 
-print("https://www.crawler-test.com/status_codes/status_숫자")
+#print("https://www.crawler-test.com/status_codes/status_숫자")
 # &_returnType=json (json 반환 , 웹 뒤에 붙여 쓰면 됨)
 # 웹 페이지 헤더 확인하기 (계속)

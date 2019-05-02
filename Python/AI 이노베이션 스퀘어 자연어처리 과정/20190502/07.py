@@ -2,7 +2,7 @@ import requests
 
 #header = {"user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.108 Safari/537.36"}
 
-url = " http://timetime.kr/user/login"
+url = "http://www.kyobobook.co.kr/search/SearchCommonMain.jsp"
 
 def download(url, params={}, retries=3):
     resp = None
@@ -21,6 +21,11 @@ def download(url, params={}, retries=3):
 
     return resp
 
-html = requests.post(url,{"username":"donddog", "password":"12345678"} )
+params = {
+    "vPstrCategory": "TOT",
+    "vPstrKeyWord": "hi",
+    "vPplace": "top",
+}
 
+html = requests.post(url, params)
 print(html.text)
