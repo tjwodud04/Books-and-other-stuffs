@@ -13147,7 +13147,7 @@ Requirement already satisfied: soupsieve&gt;=1.2 in c:\users\user\anaconda3\lib\
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">html</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
@@ -13172,7 +13172,7 @@ Requirement already satisfied: soupsieve&gt;=1.2 in c:\users\user\anaconda3\lib\
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">bs4</span> <span class="k">import</span> <span class="n">BeautifulSoup</span>
@@ -13437,7 +13437,7 @@ a [&#39;blue&#39;] go to page2
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">urllib</span> <span class="k">import</span> <span class="n">parse</span>
@@ -14671,6 +14671,584 @@ https://www.mk.co.kr/star/hot-issues/view/2019/05/289514/
 https://twitter.com/hashtag/%EB%B0%95%EB%B3%B4%EC%98%81
 박보영은 오래 지켜본다. 연애도, 연기 변신도 - 중앙일보 - 조인스
 https://news.joins.com/article/22895953
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">url</span> <span class="o">=</span> <span class="s1">&#39;https://search.naver.com/search.naver&#39;</span>
+<span class="n">params</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;query&#39;</span><span class="p">:</span><span class="s1">&#39;박보영&#39;</span><span class="p">}</span>
+<span class="n">html</span> <span class="o">=</span> <span class="n">download</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">params</span><span class="p">)</span>
+
+<span class="n">dom2</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">html</span><span class="o">.</span><span class="n">text</span><span class="p">,</span> <span class="s1">&#39;lxml&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[39]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">links</span> <span class="ow">in</span> <span class="n">dom2</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;class&#39;</span><span class="p">:</span><span class="s1">&#39;thumb&#39;</span><span class="p">}):</span>
+    <span class="n">a</span> <span class="o">=</span> <span class="n">links</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;href&#39;</span><span class="p">)</span>
+    <span class="c1">#b = links.find(&#39;a&#39;).get(&#39;href&#39;).text</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>https://music.naver.com/album/index.nhn?albumId=2500698
+https://music.naver.com/album/index.nhn?albumId=565464
+http://www.sportsseoul.com/news/read/758927
+http://news1.kr/articles/?3613710
+http://www.osen.co.kr/article/G1111135596
+http://star.mk.co.kr/new/view.php?mc=ST&amp;year=2019&amp;no=291927
+https://m.post.naver.com/viewer/postView.nhn?volumeNo=19568466&amp;memberNo=36645352&amp;vType=VERTICAL
+https://m.post.naver.com/viewer/postView.nhn?volumeNo=17970239&amp;memberNo=23519771&amp;vType=VERTICAL
+https://m.post.naver.com/viewer/postView.nhn?volumeNo=19260625&amp;memberNo=22401813&amp;vType=VERTICAL
+https://cafe.naver.com/imsanbu/44492596
+https://cafe.naver.com/momakakao/11285454
+https://cafe.naver.com/mom3050/37277
+https://cafe.naver.com/linearbeit/43556
+https://cafe.naver.com/isajime/3995463
+https://blog.naver.com/js2y86?Redirect=Log&amp;logNo=221454815826
+https://blog.naver.com/imagetech1?Redirect=Log&amp;logNo=221529688167
+https://blog.naver.com/agaci01?Redirect=Log&amp;logNo=221528823480
+https://blog.naver.com/cuterobbie?Redirect=Log&amp;logNo=221521796495
+https://blog.naver.com/lunasea883?Redirect=Log&amp;logNo=221518972103
+http://tvcast.naver.com/v/8258393
+http://tvcast.naver.com/v/8258393
+http://tvcast.naver.com/v/8258382
+http://tvcast.naver.com/v/8258382
+http://tvcast.naver.com/v/8096378
+http://news.naver.com/main/pass.nhn?type=commentList&amp;id=news117,0003210759
+https://twitter.com/parkhyoshinland
+http://tvcast.naver.com/v/8207809
+http://tvcast.naver.com/v/8258382
+http://news.naver.com/main/pass.nhn?type=commentList&amp;id=news112,0003160787
+https://kin.naver.com/qna/detail.nhn?d1id=3&amp;dirId=31402&amp;docId=322399276&amp;qb=67CV67O07JiB&amp;enc=utf8&amp;section=kin&amp;rank=3&amp;search_sort=0&amp;spq=1
+https://kin.naver.com/qna/detail.nhn?d1id=3&amp;dirId=31401&amp;docId=315877714&amp;qb=67CV67O07JiB&amp;enc=utf8&amp;section=kin&amp;rank=4&amp;search_sort=0&amp;spq=1
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">url</span> <span class="o">=</span> <span class="s1">&#39;http://www.iamroot.org/xe/index.php?document_srl=202917&amp;mid=Notice#125&#39;</span>
+<span class="n">html</span> <span class="o">=</span> <span class="n">download</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+<span class="n">dom3</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">html</span><span class="o">.</span><span class="n">text</span><span class="p">,</span> <span class="s1">&#39;lxml&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">names</span> <span class="ow">in</span> <span class="n">dom3</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;class&#39;</span><span class="p">:</span><span class="s1">&#39;thumb&#39;</span><span class="p">}):</span>
+    <span class="n">a</span> <span class="o">=</span> <span class="n">links</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;href&#39;</span><span class="p">)</span>
+    <span class="c1">#b = links.find(&#39;a&#39;).get(&#39;href&#39;).text</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">url</span> <span class="o">=</span> <span class="s1">&#39;https://search.daum.net/nate&#39;</span>
+<span class="n">params</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;q&#39;</span><span class="p">:</span><span class="s1">&#39;박보영&#39;</span><span class="p">}</span>
+<span class="n">html</span> <span class="o">=</span> <span class="n">download</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">params</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">dom4</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">html</span><span class="o">.</span><span class="n">text</span><span class="p">,</span> <span class="s1">&#39;lxml&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#for links in dom4.find_all(&#39;div&#39;, {&#39;class&#39;:&#39;wrap_tit mg_tit&#39;}):</span>
+<span class="c1">#    a = links.find(&#39;a&#39;).get(&#39;href&#39;)   </span>
+<span class="c1">#    print(a)</span>
+    
+<span class="n">titles</span> <span class="o">=</span> <span class="n">dom4</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;div &gt; a&#39;</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">title</span> <span class="ow">in</span> <span class="n">titles</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">title</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">title</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;href&#39;</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>네이트 메인가기
+http://www.nate.com/?f=natesvc
+더보기&gt;
+http://www.nate.com/sitemap/index.html
+
+더보기/접기
+
+javascript:;
+
+
+javascript:;
+
+
+javascript:;
+ 더보기
+
+javascript:;
+마이프로필 관리
+http://myprofile.daum.net/top/
+  
+?q=%EB%B0%95%EB%B3%B4%EC%98%81&amp;w=img&amp;FaceType=y
+박보영
+http://100.daum.net/encyclopedia/view/33/34191
+  
+http://movie.daum.net/moviedb/main?movieId=113862
+너의 결혼식
+http://movie.daum.net/moviedb/main?movieId=113862
+  
+http://movie.daum.net/moviedb/main?movieId=89203
+열정같은소리하고있네
+http://movie.daum.net/moviedb/main?movieId=89203
+  
+http://movie.daum.net/moviedb/main?movieId=90113
+돌연변이
+http://movie.daum.net/moviedb/main?movieId=90113
+영화 14건 전체보기
+http://movie.daum.net/person/movielist?personId=105244
+  
+?q=%EC%96%B4%EB%B9%84%EC%8A%A4&amp;w=tot&amp;DA=PRF&amp;irt=tv-program&amp;irk=83750&amp;rtmaxcoll=TVP
+어비스
+?q=%EC%96%B4%EB%B9%84%EC%8A%A4&amp;w=tot&amp;DA=PRF&amp;irt=tv-program&amp;irk=83750&amp;rtmaxcoll=TVP
+  
+?q=%ED%9E%98%EC%8E%88%EC%97%AC%EC%9E%90%20%EB%8F%84%EB%B4%89%EC%88%9C&amp;w=tot&amp;DA=PRF&amp;irt=tv-program&amp;irk=77141&amp;rtmaxcoll=TVP
+힘쎈여자 도봉순
+?q=%ED%9E%98%EC%8E%88%EC%97%AC%EC%9E%90%20%EB%8F%84%EB%B4%89%EC%88%9C&amp;w=tot&amp;DA=PRF&amp;irt=tv-program&amp;irk=77141&amp;rtmaxcoll=TVP
+  
+?q=%ED%9E%98%EC%8E%88%EC%97%AC%EC%9E%90%20%EB%8F%84%EB%B4%89%EC%88%9C%20%EC%BB%A4%EB%B0%8D%EC%88%9C&amp;w=tot&amp;DA=PRF&amp;irt=tv-program&amp;irk=79314&amp;rtmaxcoll=TVP
+힘쎈여자 도봉순 커밍순
+?q=%ED%9E%98%EC%8E%88%EC%97%AC%EC%9E%90%20%EB%8F%84%EB%B4%89%EC%88%9C%20%EC%BB%A4%EB%B0%8D%EC%88%9C&amp;w=tot&amp;DA=PRF&amp;irt=tv-program&amp;irk=79314&amp;rtmaxcoll=TVP
+방송 16건 전체보기
+http://100.daum.net/encyclopedia/view/33XXXXX34191#tv
+  
+http://m.melon.com/kakaoGatePage.htm?cType1=content&amp;cType2=album&amp;cId=10194526&amp;ref=W10600
+영화 너의결혼식 OST Part.1
+http://m.melon.com/kakaoGatePage.htm?cType1=content&amp;cType2=album&amp;cId=10194526&amp;ref=W10600
+  
+http://m.melon.com/kakaoGatePage.htm?cType1=content&amp;cType2=album&amp;cId=2332510&amp;ref=W10600
+오 나의 귀신님 OST Part.3
+http://m.melon.com/kakaoGatePage.htm?cType1=content&amp;cType2=album&amp;cId=2332510&amp;ref=W10600
+  
+http://www.playdb.co.kr/playdb/PlaydbDetail.asp?sReqPlayno=137447
+ 박보영 팬미팅 
+http://www.playdb.co.kr/playdb/PlaydbDetail.asp?sReqPlayno=137447
+  동영상 
+https://tv.kakao.com/v/398181054
+[2화 예고]똑부러진 박보영과 허술한(?) 안효...
+https://tv.kakao.com/v/398181054
+  동영상 
+https://tv.kakao.com/v/398181057
+＂저 기억 안 나세요?＂ 박보영, 부활 후 안효...
+https://tv.kakao.com/v/398181057
+  동영상 
+https://tv.kakao.com/v/398180894
+[2화 예고]자신을 죽인 살인범을 쫓는 박보영...
+https://tv.kakao.com/v/398180894
+  동영상 
+https://tv.kakao.com/v/398180896
+[부활엔딩] ＂너 고세연 맞지?＂ 부활한 박보...
+https://tv.kakao.com/v/398180896
+  
+?q=%ED%8C%90%EC%82%AC%20%EB%B0%95%EB%B3%B4%EC%98%81&amp;w=tot&amp;ppkey=1101041&amp;irk=1101041&amp;rtmaxcoll=PRF
+박보영
+?q=%ED%8C%90%EC%82%AC%20%EB%B0%95%EB%B3%B4%EC%98%81&amp;w=tot&amp;ppkey=1101041&amp;irk=1101041&amp;rtmaxcoll=PRF
+  
+?q=%EA%B0%80%EC%88%98%20%EC%A2%8B%EC%9D%80%EB%82%A0%ED%92%8D%EA%B2%BD&amp;w=tot&amp;ppkey=547214&amp;irk=547214&amp;rtmaxcoll=PRF
+좋은날풍경(박보영)
+?q=%EA%B0%80%EC%88%98%20%EC%A2%8B%EC%9D%80%EB%82%A0%ED%92%8D%EA%B2%BD&amp;w=tot&amp;ppkey=547214&amp;irk=547214&amp;rtmaxcoll=PRF
+  
+?q=%EB%B3%80%ED%98%B8%EC%82%AC%20%EB%B0%95%EB%B3%B4%EC%98%81&amp;w=tot&amp;ppkey=1861296&amp;irk=1861296&amp;rtmaxcoll=PRF
+박보영
+?q=%EB%B3%80%ED%98%B8%EC%82%AC%20%EB%B0%95%EB%B3%B4%EC%98%81&amp;w=tot&amp;ppkey=1861296&amp;irk=1861296&amp;rtmaxcoll=PRF
+인물 더보기
+?w=profile&amp;q=%EB%B0%95%EB%B3%B4%EC%98%81
+최신
+?w=news&amp;cluster=n&amp;q=%EB%B0%95%EB%B3%B4%EC%98%81&amp;sort=recency&amp;DA=
+  
+http://v.media.daum.net/v/20190506224800505?f=o
+[종합] &#39;어비스&#39; 박보영X안효섭, 영혼소생구슬 어비스로 인생 2막 ...
+http://v.media.daum.net/v/20190506224800505?f=o
+  
+http://v.media.daum.net/v/20190506225727566?f=o
+[종합] &#34;내가 죽은 널 살렸어&#34;..첫방 &#39;어비스&#39; 안효섭, 김사랑→박...
+http://v.media.daum.net/v/20190506225727566?f=o
+  
+http://v.media.daum.net/v/20190506170703091?f=o
+&#39;어비스&#39; 박보영-안효섭, 웃음꽃 활짝 팀워크..비하인드컷 대 방출
+http://v.media.daum.net/v/20190506170703091?f=o
+  
+http://v.media.daum.net/v/20190506174200677?f=o
+&#39;오 나의 귀신님&#39; 이후 4년.. tvN 황금기 문 연 박보영의 tvN 컴백
+http://v.media.daum.net/v/20190506174200677?f=o
+펼쳐보기
+javascript:;
+접기
+javascript:;
+뉴스 더보기
+?w=news&amp;q=%EB%B0%95%EB%B3%B4%EC%98%81&amp;DA=&amp;spacing=0
+펼쳐보기
+javascript:;
+이미지 더보기
+?w=img&amp;q=%EB%B0%95%EB%B3%B4%EC%98%81&amp;DA=IIM
+  
+http://papa0717.tistory.com/223
+박보영 실제 키는 도대체 몇일까?
+http://papa0717.tistory.com/223
+  
+http://dudrms606.tistory.com/367
+박보영 나이 몸매 실제키 드라마 어비스
+http://dudrms606.tistory.com/367
+  
+http://adam24eve.tistory.com/858
+김영광 박보영 열애 터진 이유
+http://adam24eve.tistory.com/858
+  
+http://k3k2y.tistory.com/35
+박보영 나이 키 몸매 대박
+http://k3k2y.tistory.com/35
+ 로딩중 펼쳐보기 
+javascript:;
+블로그 더보기
+?w=blog&amp;m=board&amp;collName=blog_total&amp;q=%EB%B0%95%EB%B3%B4%EC%98%81&amp;spacing=0&amp;DA=BR1
+신청하기
+https://register.search.daum.net/
+박보영 갤러리
+http://gall.dcinside.com/board/lists/?id=parkboyoung
+gall.dcinside.com/board/lists/?id=parkboyoung
+http://gall.dcinside.com/board/lists/?id=parkboyoung
+박보영 공식팬카페 뽀르테
+http://cafe.daum.net/parkboyoungfd
+박보영
+?w=cafe&amp;m=name&amp;SearchType=tag&amp;ResultType=3&amp;q=%EB%B0%95%EB%B3%B4%EC%98%81
+박보영팬클럽
+?w=cafe&amp;m=name&amp;SearchType=tag&amp;ResultType=3&amp;q=%EB%B0%95%EB%B3%B4%EC%98%81%ED%8C%AC%ED%81%B4%EB%9F%BD
+박보영팬카페
+?w=cafe&amp;m=name&amp;SearchType=tag&amp;ResultType=3&amp;q=%EB%B0%95%EB%B3%B4%EC%98%81%ED%8C%AC%EC%B9%B4%ED%8E%98
+박보영공식
+?w=cafe&amp;m=name&amp;SearchType=tag&amp;ResultType=3&amp;q=%EB%B0%95%EB%B3%B4%EC%98%81%EA%B3%B5%EC%8B%9D
+경성학교
+?w=cafe&amp;m=name&amp;SearchType=tag&amp;ResultType=3&amp;q=%EA%B2%BD%EC%84%B1%ED%95%99%EA%B5%90
+오나의귀신님
+?w=cafe&amp;m=name&amp;SearchType=tag&amp;ResultType=3&amp;q=%EC%98%A4%EB%82%98%EC%9D%98%EA%B7%80%EC%8B%A0%EB%8B%98
+늑대소년
+?w=cafe&amp;m=name&amp;SearchType=tag&amp;ResultType=3&amp;q=%EB%8A%91%EB%8C%80%EC%86%8C%EB%85%84
+피끓는청춘
+?w=cafe&amp;m=name&amp;SearchType=tag&amp;ResultType=3&amp;q=%ED%94%BC%EB%81%93%EB%8A%94%EC%B2%AD%EC%B6%98
+과속스캔들
+?w=cafe&amp;m=name&amp;SearchType=tag&amp;ResultType=3&amp;q=%EA%B3%BC%EC%86%8D%EC%8A%A4%EC%BA%94%EB%93%A4
+열정같은소리하네
+?w=cafe&amp;m=name&amp;SearchType=tag&amp;ResultType=3&amp;q=%EC%97%B4%EC%A0%95%EA%B0%99%EC%9D%80%EC%86%8C%EB%A6%AC%ED%95%98%EB%84%A4
+cafe.daum.net/parkboyoungfd
+http://cafe.daum.net/parkboyoungfd
+Park Bo Young V LIVE
+http://channels.vlive.tv/FCE49/video
+channels.vlive.tv/FCE49/video
+http://channels.vlive.tv/FCE49/video
+인천방주교회
+http://www.bjc.or.kr/
+www.bjc.or.kr/
+http://www.bjc.or.kr/
+ 로딩중 펼쳐보기 
+javascript:;
+사이트 더보기
+?w=site&amp;DA=IVR&amp;q=%EB%B0%95%EB%B3%B4%EC%98%81&amp;spacing=0
+  
+http://cafe.daum.net/subdued20club/ReHf/2280152?q=%EB%B0%95%EB%B3%B4%EC%98%81
+박보영과 역대급 케미뽐낸 상대배우 고르기
+http://cafe.daum.net/subdued20club/ReHf/2280152?q=%EB%B0%95%EB%B3%B4%EC%98%81
+  
+http://cafe.daum.net/subdued20club/ReHf/2282606?q=%EB%B0%95%EB%B3%B4%EC%98%81
+드라마 어비스 인물 소개, 예고편(박보영, 안효섭 주연)
+http://cafe.daum.net/subdued20club/ReHf/2282606?q=%EB%B0%95%EB%B3%B4%EC%98%81
+  
+http://cafe.daum.net/ASMONACOFC/gAVU/1243818?q=%EB%B0%95%EB%B3%B4%EC%98%81
+박보영이 왜 못 오를 나무냐는 박수홍.jpg
+http://cafe.daum.net/ASMONACOFC/gAVU/1243818?q=%EB%B0%95%EB%B3%B4%EC%98%81
+  
+http://cafe.daum.net/ok1221/9Zdf/1524913?q=%EB%B0%95%EB%B3%B4%EC%98%81
+런닝맨 나올 때마다 케미 보여준 송지효X박보영.jpgif
+http://cafe.daum.net/ok1221/9Zdf/1524913?q=%EB%B0%95%EB%B3%B4%EC%98%81
+ 로딩중 펼쳐보기 
+javascript:;
+카페글 더보기
+?w=cafe&amp;DA=CCB&amp;q=%EB%B0%95%EB%B3%B4%EC%98%81&amp;m=board&amp;sort=accuracy&amp;ASearchType=1&amp;lpp=10&amp;rlang=0&amp;req=cafe&amp;spacing=0
+ 박보영
+https://ko.wikipedia.org/wiki/%EB%B0%95%EB%B3%B4%EC%98%81
+ 박보영 (법조인)
+https://ko.wikipedia.org/wiki/%EB%B0%95%EB%B3%B4%EC%98%81%20%28%EB%B2%95%EC%A1%B0%EC%9D%B8%29
+ 백과사전 더보기   
+http://100.daum.net/search/entry?q=%EB%B0%95%EB%B3%B4%EC%98%81
+광고신청
+http://local.biz.daum.net/
+신규등록
+https://register.search.daum.net/index.daum
+전체보기
+http://map.kakao.com/?map_type=DEFAULT&amp;map_hybrid=false&amp;q=%EB%B0%95%EB%B3%B4%EC%98%81
+확대
+javascript:;
+축소
+javascript:;
+ 박보영의 골프AtoZ 
+http://place.map.kakao.com/20618001
+ 서울 강남구 도산대로85길 50-22  펼치기/접기 
+javascript:;
+  로드뷰 
+http://map.kakao.com/?q=%EB%B0%95%EB%B3%B4%EC%98%81&amp;srcid=20618001&amp;confirmid=20618001&amp;rv=on
+  길찾기 
+http://map.kakao.com/?target=car&amp;eX=511451&amp;eY=1118769&amp;eName=%EB%B0%95%EB%B3%B4%EC%98%81%EC%9D%98+%EA%B3%A8%ED%94%84AtoZ&amp;ids=,P20618001
+ 박보영헤어 
+http://place.map.kakao.com/14840795
+홈페이지
+http://blog.naver.com/bofamily
+ 부산 동래구 아시아드대로246번길 3  펼치기/접기 
+javascript:;
+  로드뷰 
+http://map.kakao.com/?q=%EB%B0%95%EB%B3%B4%EC%98%81&amp;srcid=14840795&amp;confirmid=14840795&amp;rv=on
+  길찾기 
+http://map.kakao.com/?target=car&amp;eX=970917&amp;eY=479686&amp;eName=%EB%B0%95%EB%B3%B4%EC%98%81%ED%97%A4%EC%96%B4&amp;ids=,P14840795
+ 박보영헤어 광복점 
+http://place.map.kakao.com/990737519
+ 부산 중구 광복중앙로 14-12  펼치기/접기 
+javascript:;
+  로드뷰 
+http://map.kakao.com/?q=%EB%B0%95%EB%B3%B4%EC%98%81&amp;srcid=990737519&amp;confirmid=990737519&amp;rv=on
+  길찾기 
+http://map.kakao.com/?target=car&amp;eX=963051&amp;eY=450341&amp;eName=%EB%B0%95%EB%B3%B4%EC%98%81%ED%97%A4%EC%96%B4+%EA%B4%91%EB%B3%B5%EC%A0%90&amp;ids=,P990737519
+ 박보영변호사사무소 
+http://place.map.kakao.com/26845235
+ 부산 연제구 법원로 28  펼치기/접기 
+javascript:;
+  로드뷰 
+http://map.kakao.com/?q=%EB%B0%95%EB%B3%B4%EC%98%81&amp;srcid=26845235&amp;confirmid=26845235&amp;rv=on
+  길찾기 
+http://map.kakao.com/?target=car&amp;eX=972312&amp;eY=475743&amp;eName=%EB%B0%95%EB%B3%B4%EC%98%81%EB%B3%80%ED%98%B8%EC%82%AC%EC%82%AC%EB%AC%B4%EC%86%8C&amp;ids=,P26845235
+ 장소 더보기 
+http://map.kakao.com/?from=total&amp;nil_suggest=btn&amp;q=%EB%B0%95%EB%B3%B4%EC%98%81&amp;tab=place
+박보영
+?nil_suggest=btn&amp;w=tot&amp;m=tag&amp;DA=BRC&amp;rtmaxcoll=BRC&amp;brunch_tag=t&amp;q=%EB%B0%95%EB%B3%B4%EC%98%81
+리뷰
+?nil_suggest=btn&amp;w=tot&amp;m=tag&amp;DA=BRC&amp;rtmaxcoll=BRC&amp;brunch_tag=t&amp;q=%EB%A6%AC%EB%B7%B0
+드라마
+?nil_suggest=btn&amp;w=tot&amp;m=tag&amp;DA=BRC&amp;rtmaxcoll=BRC&amp;brunch_tag=t&amp;q=%EB%93%9C%EB%9D%BC%EB%A7%88
+영화
+?nil_suggest=btn&amp;w=tot&amp;m=tag&amp;DA=BRC&amp;rtmaxcoll=BRC&amp;brunch_tag=t&amp;q=%EC%98%81%ED%99%94
+사랑
+?nil_suggest=btn&amp;w=tot&amp;m=tag&amp;DA=BRC&amp;rtmaxcoll=BRC&amp;brunch_tag=t&amp;q=%EC%82%AC%EB%9E%91
+영화리뷰
+?nil_suggest=btn&amp;w=tot&amp;m=tag&amp;DA=BRC&amp;rtmaxcoll=BRC&amp;brunch_tag=t&amp;q=%EC%98%81%ED%99%94%EB%A6%AC%EB%B7%B0
+스틸컷
+?nil_suggest=btn&amp;w=tot&amp;m=tag&amp;DA=BRC&amp;rtmaxcoll=BRC&amp;brunch_tag=t&amp;q=%EC%8A%A4%ED%8B%B8%EC%BB%B7
+첫사랑
+?nil_suggest=btn&amp;w=tot&amp;m=tag&amp;DA=BRC&amp;rtmaxcoll=BRC&amp;brunch_tag=t&amp;q=%EC%B2%AB%EC%82%AC%EB%9E%91
+아가씨
+?nil_suggest=btn&amp;w=tot&amp;m=tag&amp;DA=BRC&amp;rtmaxcoll=BRC&amp;brunch_tag=t&amp;q=%EC%95%84%EA%B0%80%EC%94%A8
+로맨틱코미디
+?nil_suggest=btn&amp;w=tot&amp;m=tag&amp;DA=BRC&amp;rtmaxcoll=BRC&amp;brunch_tag=t&amp;q=%EB%A1%9C%EB%A7%A8%ED%8B%B1%EC%BD%94%EB%AF%B8%EB%94%94
+멜로영화
+?nil_suggest=btn&amp;w=tot&amp;m=tag&amp;DA=BRC&amp;rtmaxcoll=BRC&amp;brunch_tag=t&amp;q=%EB%A9%9C%EB%A1%9C%EC%98%81%ED%99%94
+배우
+?nil_suggest=btn&amp;w=tot&amp;m=tag&amp;DA=BRC&amp;rtmaxcoll=BRC&amp;brunch_tag=t&amp;q=%EB%B0%B0%EC%9A%B0
+한국영화
+?nil_suggest=btn&amp;w=tot&amp;m=tag&amp;DA=BRC&amp;rtmaxcoll=BRC&amp;brunch_tag=t&amp;q=%ED%95%9C%EA%B5%AD%EC%98%81%ED%99%94
+더보기
+javascript:;
+  
+https://brunch.co.kr/@sugyo/11
+  
+https://brunch.co.kr/@strobe/20
+  
+https://brunch.co.kr/@legur2/1
+ 로딩중 펼쳐보기 
+javascript:;
+
+
+
+
+동영상
+바로보기
+플레이어 닫기
+01:10
+
+
+javascript:;
+＂뭐꼬?＂ 박보영, 찰진 사투리와 함께 등장! (ft.사라진 한소희)
+javascript:;
+어비스 1화영상보기
+http://tv.kakao.com/channel/3278084/playlist/269446
+
+
+
+
+동영상
+바로보기
+플레이어 닫기
+01:10
+
+
+javascript:;
+[부활엔딩] ＂너 고세연 맞지?＂ 부활한 박보영을 알아본 안효섭
+javascript:;
+어비스 1화영상보기
+http://tv.kakao.com/channel/3278084/playlist/269446
+
+
+
+
+동영상
+바로보기
+플레이어 닫기
+01:49
+
+
+javascript:;
+(충격)자신의 영정사진을 마주한 박보영! 빗속 오열
+javascript:;
+어비스 1화영상보기
+http://tv.kakao.com/channel/3278084/playlist/269446
+
+
+
+
+동영상
+바로보기
+플레이어 닫기
+01:17
+
+
+javascript:;
+＂저 기억 안 나세요?＂ 박보영, 부활 후 안효섭과 첫 대면!
+javascript:;
+어비스 1화영상보기
+http://tv.kakao.com/channel/3278084/playlist/269446
+
+
+
+
+동영상
+바로보기
+플레이어 닫기
+03:19
+
+
+javascript:;
+박보영 스피커와 물아일체! 대장님 미안해요ㅜㅜ
+javascript:;
+놀라운 토요일 57화영상보기
+http://tv.kakao.com/channel/3038225/playlist/268170
+
+로딩중
+펼쳐보기
+
+javascript:;
+동영상 더보기
+?w=vclip&amp;m=vclip&amp;q=%EB%B0%95%EB%B3%B4%EC%98%81&amp;spacing=0&amp;DA=VO2
+질문하기
+http://tip.daum.net/ask?q=%EB%B0%95%EB%B3%B4%EC%98%81
+  
+http://tip.daum.net/answer/54503481?q=%EB%B0%95%EB%B3%B4%EC%98%81
+박보영, 제2의 문근영이라는 호칭때문에 악플에 시달렸나요? 아역배우... 
+http://tip.daum.net/answer/54503481?q=%EB%B0%95%EB%B3%B4%EC%98%81
+  
+http://tip.daum.net/answer/54767339?q=%EB%B0%95%EB%B3%B4%EC%98%81
+박보영, 과속스캔들 OST 중 &#39;아마도그건&#39; 불렀다던데, 이번에 과속... 
+http://tip.daum.net/answer/54767339?q=%EB%B0%95%EB%B3%B4%EC%98%81
+박보영누나 과속스캔들찍고 또 다른 드라마나 영화 찍나요?&gt; 박보영누나... 
+http://tip.daum.net/answer/55072609?q=%EB%B0%95%EB%B3%B4%EC%98%81
+박보영 질문요. 박보영 진짜 예쁘더군요... 박보영이 대체 누군... 
+http://tip.daum.net/answer/54866982?q=%EB%B0%95%EB%B3%B4%EC%98%81
+ 로딩중 펼쳐보기 
+javascript:;
+ 팁 더보기 
+?w=knowledge&amp;q=%EB%B0%95%EB%B3%B4%EC%98%81&amp;spacing=0&amp;DA=NKS
+ 더보기
+
+javascript:;
+
+T!P팁에 질문하기
+
+http://tip.daum.net/ask?q=%EB%B0%95%EB%B3%B4%EC%98%81
+SK Communications.
+http://www.skcomms.co.kr
 </pre>
 </div>
 </div>
