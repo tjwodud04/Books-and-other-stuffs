@@ -1,4 +1,4 @@
-﻿- C
+- C
 : Some codes written at C
 
 - Chatbot Practice
