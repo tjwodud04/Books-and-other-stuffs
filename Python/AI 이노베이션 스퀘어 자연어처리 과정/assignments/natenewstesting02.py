@@ -45,7 +45,7 @@ for i in range(0, 150):
     a.download()
     a.parse()
     with open(
-            "C:/Users/J/Desktop/바탕화면 파일들/CodePractice/Python/AI 이노베이션 스퀘어 자연어처리 과정/assignments/natenews/칼럼/%d.txt" % int(
+            "" % int(
                     i + t), "w", encoding="utf-8") as f:
         f.write(a.title)
         f.write(a.text)
