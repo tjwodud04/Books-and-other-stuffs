@@ -40,7 +40,7 @@ for i in range(0,17):
     a = Article(url, language='ko')
     a.download()
     a.parse()
-    with open("C:/Users/J/Desktop/바탕화면 파일들/CodePractice/Python/AI 이노베이션 스퀘어 자연어처리 과정/assignments/daumnews/entertain/%d.txt" % int(i+t), "w", encoding="utf-8") as f:
+    with open("" % int(i+t), "w", encoding="utf-8") as f:
         f.write(a.title)
         f.write(a.text)
         f.close()
