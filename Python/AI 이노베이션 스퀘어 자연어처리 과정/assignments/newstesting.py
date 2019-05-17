@@ -22,7 +22,7 @@ def download(url, params={}, retries=3):
 
     return resp
 
-html = download("https://media.daum.net/breakingnews/entertain")
+html = download("https://media.daum.net/breakingnews/digital")
 daumnews = BeautifulSoup(html.text, "lxml")
 
 daumnewstitellists = daumnews.select("div > strong > a")
@@ -35,12 +35,12 @@ for links in daumnewstitellists:
     l = links.get('href')
     k.append(l)
 
-for i in range(0,17):
+for i in range(0,20):
     url = k[i]
     a = Article(url, language='ko')
     a.download()
     a.parse()
-    with open("" % int(i+t), "w", encoding="utf-8") as f:
+    with open("C:/Users/J/Desktop/바탕화면 파일들/CodePractice/Python/AI 이노베이션 스퀘어 자연어처리 과정/news/IT20190516%d.txt" % i, "w", encoding="utf-8") as f:
         f.write(a.title)
         f.write(a.text)
         f.close()
