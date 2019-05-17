@@ -2,7 +2,6 @@ from newspaper import Article
 from bs4 import BeautifulSoup
 import requests
 
-
 def download(url, params={}, retries=3):
     resp = None
 
@@ -23,7 +22,6 @@ def download(url, params={}, retries=3):
 
     return resp
 
-
 html = download("https://news.nate.com/column")
 natenews = BeautifulSoup(html.text, "lxml")
 
@@ -42,9 +40,7 @@ for i in range(0, 20):
     a = Article(url, language='ko')
     a.download()
     a.parse()
-    with open(
-            "" % i,
-            "w", encoding="utf-8") as f:
+    with open( "%d.txt" % i, "w", encoding="utf-8") as f:
         f.write(a.title)
         f.write(a.text)
         f.close()

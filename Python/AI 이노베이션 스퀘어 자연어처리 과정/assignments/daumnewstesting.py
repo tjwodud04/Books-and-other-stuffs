@@ -22,29 +22,24 @@ def download(url, params={}, retries=3):
 
     return resp
 
-html = download("https://news.nate.com/column")
-natenews = BeautifulSoup(html.text, "lxml")
+html = download("https://media.daum.net/breakingnews/digital")
+daumnews = BeautifulSoup(html.text, "lxml")
 
-natenewstitellists = natenews.select("div[id=newsContents] > div > div > div > ul > li > a")
-# cid706693 > div > div > div > a
+daumnewstitellists = daumnews.select("div > strong > a")
 
 k = []
-t = 10
+t = 17
 
-for links in natenewstitellists:
+for links in daumnewstitellists:
     l = links.get('href')
-    k.append('https:' + l)
+    k.append(l)
 
-# print(k)
-for i in range(0, 150):
+for i in range(0,20):
     url = k[i]
     a = Article(url, language='ko')
     a.download()
     a.parse()
-    with open( "%d.txt" % int(i + t), "w", encoding="utf-8") as f:
+    with open("%d.txt" % i, "w", encoding="utf-8") as f:
         f.write(a.title)
         f.write(a.text)
         f.close()
-
-# cid706693 > div > div > div > a
-# cid706693 > div > div > ul > li:nth-child(1) > a
