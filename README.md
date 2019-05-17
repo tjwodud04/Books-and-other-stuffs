@@ -1,5 +1,5 @@
 - C
-: Some codes written at C
+: Some codes written in C
 
 - Chatbot Practice
 : samples to challenge like a project
