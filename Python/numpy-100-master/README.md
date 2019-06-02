@@ -1,1 +1,1 @@
-- ��ó: https://github.com/rougier/numpy-100
+﻿- 출처: https://github.com/rougier/numpy-100
