@@ -20,4 +20,4 @@
 : Short codes for preparing a test
 
 - Python
-: Following some python codes written at books. Plus, there are some scribbles about collecting data
+: Following some python codes written at books. Plus, there are some scribbles about collecting dat
