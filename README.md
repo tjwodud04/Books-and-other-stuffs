@@ -1,5 +1,5 @@
 - C
-: Some codes written in C (mainly about school assignments)
+: Some codes written in C (Mainly about school assignments)
 
 - Chatbot Practice
 : samples to challenge like a project
@@ -20,4 +20,4 @@
 : Short codes for preparing a test
 
 - Python
-: Following some python codes written at books. Plus, there are some scribbles about collecting data
+: Following some python codes. Plus, there are some scribbles about collecting data
