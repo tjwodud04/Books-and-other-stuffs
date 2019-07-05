@@ -11,7 +11,7 @@
 : Some materials from school, with group study or from Academy
 
 - Intersting Papers 
-: Some papers feeling interested
+: Some papers interesting
 
 - Interview_Question_for_Beginner 
 : Submodule of some tips from github opens source which I fork
