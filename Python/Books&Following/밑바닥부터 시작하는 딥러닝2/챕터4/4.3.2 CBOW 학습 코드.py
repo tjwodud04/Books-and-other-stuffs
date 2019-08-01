@@ -1,10 +1,9 @@
 import numpy as np
 import config
 import pickle
-from util.defall import Trainer, Adam, create_contexts_target
+from DefinitionOfAll import Trainer, Adam, create_contexts_target
 import CBOW
 from dataset import ptb
-import cupy
 
 config.GPU = True
 

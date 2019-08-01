@@ -1,6 +1,5 @@
 import numpy as np
-import matplotlib.pyplot as plt
-from util.defall import create_co_matrix, ppmi, most_similar
+from DefinitionOfAll import create_co_matrix, ppmi, most_similar
 from dataset import ptb
 
 window_size = 2

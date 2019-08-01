@@ -1,6 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
-from util.defall import preprocess, create_co_matrix, cos_similarity, ppmi
+from DefinitionOfAll import preprocess, create_co_matrix, cos_similarity, ppmi
 
 text = 'You say goodbye and I say hello.'
 corpus, word_to_id, id_to_word = preprocess(text)
@@ -12,7 +12,7 @@ U,S,V = np.linalg.svd(W)
 
 print(C[0])
 print(W[0])
-print(U[0]) #SVD
+print(U[0])
 print(U[0,:2])
 
 for word, word_id in word_to_id.items():

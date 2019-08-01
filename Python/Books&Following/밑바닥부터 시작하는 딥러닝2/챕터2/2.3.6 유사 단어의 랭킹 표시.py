@@ -1,5 +1,5 @@
 import numpy as np
-from util.defall import preprocess, create_co_matrix, cos_similarity, most_similar
+from DefinitionOfAll import preprocess, create_co_matrix, cos_similarity, most_similar
 
 x = np.array([100,-20,2])
 # print(x.argsort())

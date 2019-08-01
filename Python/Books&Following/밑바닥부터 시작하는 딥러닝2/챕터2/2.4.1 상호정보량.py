@@ -1,5 +1,5 @@
 import numpy as np
-from util.defall import preprocess, create_co_matrix, cos_similarity, ppmi
+from DefinitionOfAll import preprocess, create_co_matrix, cos_similarity, ppmi
 
 text = 'You say goodbye and I say hello.'
 corpus, word_to_id, id_to_word = preprocess(text)

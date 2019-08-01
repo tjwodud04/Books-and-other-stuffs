@@ -1,4 +1,4 @@
-from util.defall import preprocess, create_contexts_target,convert_one_hot, SimpleCBOW, Adam,Trainer
+from DefinitionOfAll import preprocess, create_contexts_target,convert_one_hot, SimpleCBOW, Adam,Trainer
 
 window_size = 1
 hidden_size = 1

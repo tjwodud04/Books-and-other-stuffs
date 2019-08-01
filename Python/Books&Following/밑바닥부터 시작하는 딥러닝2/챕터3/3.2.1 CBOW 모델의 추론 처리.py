@@ -1,5 +1,5 @@
 import numpy as np
-from util.defall import MatMul
+from DefinitionOfAll import MatMul
 
 c0 = np.array([1,0,0,0,0,0,0])
 c1 = np.array([0,0,1,0,0,0,0])

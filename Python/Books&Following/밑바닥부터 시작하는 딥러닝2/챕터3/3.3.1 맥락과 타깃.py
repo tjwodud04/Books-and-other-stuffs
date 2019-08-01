@@ -1,4 +1,4 @@
-from util.defall import preprocess, create_contexts_target,convert_one_hot
+from DefinitionOfAll import preprocess, create_contexts_target,convert_one_hot
 
 text = 'You say goobye and I say hello.'
 
