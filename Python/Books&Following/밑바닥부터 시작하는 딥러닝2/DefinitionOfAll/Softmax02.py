@@ -1,5 +1,5 @@
 import numpy as np
-from DefinitionOfAll import softmax
+from DefinitionOfAll.softmax import softmax
 
 class Softmax:
     def __init__(self):
