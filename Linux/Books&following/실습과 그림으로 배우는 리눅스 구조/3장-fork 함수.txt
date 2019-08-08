@@ -1,0 +1,23 @@
+﻿donddog@Jae:~$ vim fork.c
+donddog@Jae:~$ cc -o fork fork.c
+fork.c: In function ‘child’:
+fork.c:8:9: warning: missing terminating " character
+  printf("I'm child! my pid is %d.\n, getpid());
+         ^
+fork.c:8:9: error: missing terminating " character
+  printf("I'm child! my pid is %d.\n, getpid());
+         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+fork.c:9:20: error: expected ‘)’ before ‘;’ token
+  exit(EXIT_SUCCESS);
+                    ^
+fork.c:9:2: error: invalid use of void expression
+  exit(EXIT_SUCCESS);
+  ^~~~
+fork.c:10:1: error: expected ‘;’ before ‘}’ token
+ }
+ ^
+donddog@Jae:~$ vim fork.c
+donddog@Jae:~$ cc -o fork fork.c
+donddog@Jae:~$ ./fork
+I'm parent! my pid is 51 and the pid of my child is 52.
+I'm child! my pid is 52.
