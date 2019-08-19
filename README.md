@@ -1,4 +1,4 @@
-- C
+﻿- C
 : Some codes written in C (Mainly about school assignments)
 
 - Chatbot Practice
@@ -18,6 +18,12 @@
 
 - JAVA 정보처리기사 연습
 : Short codes for preparing a test
+
+- Kaggle Sotlutions Follow Up
+: Some python codes that are related with kaggle competition. Mainly about solutions follow up
+
+- Linux
+: Follow up some books to practice linux kernel
 
 - Python
 : Following some python codes. Plus, there are some scribbles about collecting data
