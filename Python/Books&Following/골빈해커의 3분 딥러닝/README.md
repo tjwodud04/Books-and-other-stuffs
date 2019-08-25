@@ -1,4 +1,3 @@
-### <span style="color:brown"> 골빈해커의 3분 딥러닝 </span>
-
-#### 3장: [텐서플로 프로그래밍](http://htmlpreview.github.io/?https://github.com/donddog/CodePractice/blob/master/Python/Books%26Following/%EA%B3%A8%EB%B9%88%ED%95%B4%EC%BB%A4%EC%9D%98%203%EB%B6%84%20%EB%94%A5%EB%9F%AC%EB%8B%9D/html/3%EC%9E%A5%20%ED%85%90%EC%84%9C%ED%94%8C%EB%A1%9C%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D.html)
-#### 4장: [기본 신경망 구현](http://htmlpreview.github.io/?https://github.com/donddog/CodePractice/blob/master/Python/Books%26Following/%EA%B3%A8%EB%B9%88%ED%95%B4%EC%BB%A4%EC%9D%98%203%EB%B6%84%20%EB%94%A5%EB%9F%AC%EB%8B%9D/html/4%EC%9E%A5%20%EA%B8%B0%EB%B3%B8%20%EC%8B%A0%EA%B2%BD%EB%A7%9D%20%EA%B5%AC%ED%98%84.html)
+### > <span style="color:brown"> 골빈해커의 3분 딥러닝 </span>
+#### - 3장: [텐서플로 프로그래밍](http://htmlpreview.github.io/?https://github.com/donddog/CodePractice/blob/master/Python/Books%26Following/%EA%B3%A8%EB%B9%88%ED%95%B4%EC%BB%A4%EC%9D%98%203%EB%B6%84%20%EB%94%A5%EB%9F%AC%EB%8B%9D/html/3%EC%9E%A5%20%ED%85%90%EC%84%9C%ED%94%8C%EB%A1%9C%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D.html)
+#### - 4장: [기본 신경망 구현](http://htmlpreview.github.io/?https://github.com/donddog/CodePractice/blob/master/Python/Books%26Following/%EA%B3%A8%EB%B9%88%ED%95%B4%EC%BB%A4%EC%9D%98%203%EB%B6%84%20%EB%94%A5%EB%9F%AC%EB%8B%9D/html/4%EC%9E%A5%20%EA%B8%B0%EB%B3%B8%20%EC%8B%A0%EA%B2%BD%EB%A7%9D%20%EA%B5%AC%ED%98%84.html)
