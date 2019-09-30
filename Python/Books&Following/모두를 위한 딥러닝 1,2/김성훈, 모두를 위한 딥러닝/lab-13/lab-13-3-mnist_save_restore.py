@@ -133,6 +133,56 @@ r = random.randint(0, mnist.test.num_examples - 1)
 print("Label: ", sess.run(tf.argmax(mnist.test.labels[r:r + 1], 1)))
 print("Prediction: ", sess.run(tf.argmax(hypothesis, 1), feed_dict={X: mnist.test.images[r:r + 1], keep_prob: 1}))
 
-'''
-
+''' result
+Could not find old network weights
+Start learning from: 0
+Start Epoch: 0
+Epoch: 0001 cost = 0.436934359
+Saving network...
+Start Epoch: 1
+Epoch: 0002 cost = 0.159913032
+Saving network...
+Start Epoch: 2
+Epoch: 0003 cost = 0.116018058
+Saving network...
+Start Epoch: 3
+Epoch: 0004 cost = 0.096681275
+Saving network...
+Start Epoch: 4
+Epoch: 0005 cost = 0.084224471
+Saving network...
+Start Epoch: 5
+Epoch: 0006 cost = 0.074105245
+Saving network...
+Start Epoch: 6
+Epoch: 0007 cost = 0.066751829
+Saving network...
+Start Epoch: 7
+Epoch: 0008 cost = 0.058470142
+Saving network...
+Start Epoch: 8
+Epoch: 0009 cost = 0.053073334
+Saving network...
+Start Epoch: 9
+Epoch: 0010 cost = 0.050898358
+Saving network...
+Start Epoch: 10
+Epoch: 0011 cost = 0.048577384
+Saving network...
+Start Epoch: 11
+Epoch: 0012 cost = 0.045724012
+Saving network...
+Start Epoch: 12
+Epoch: 0013 cost = 0.042662907
+Saving network...
+Start Epoch: 13
+Epoch: 0014 cost = 0.040346368
+Saving network...
+Start Epoch: 14
+Epoch: 0015 cost = 0.039371884
+Saving network...
+Learning Finished!
+Accuracy: 0.983
+Label:  [0]
+Prediction:  [0]
 '''
