@@ -1,7 +1,8 @@
-body {
-  background-color: peru; 
+h1 {
+  color: #34495e;
+  transition: color 0.5s ease-in-out;
 }
 
-h1 {
-  color: white;
+.clicked {
+  color: #7f8c8d;
 }
