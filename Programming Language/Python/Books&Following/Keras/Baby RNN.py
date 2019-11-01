@@ -147,3 +147,84 @@ print('Evaluation')
 loss, acc = model.evaluate([tx, txq], ty,
                            batch_size=BATCH_SIZE)
 print('Test loss / test accuracy = {:.4f} / {:.4f}'.format(loss, acc))
+
+'''
+Using TensorFlow backend.
+The default version of TensorFlow in Colab will soon switch to TensorFlow 2.x.
+We recommend you upgrade now or ensure your notebook will continue to use TensorFlow 1.x via the %tensorflow_version 1.x magic: more info.
+
+RNN / Embed / Sent / Query = <class 'keras.layers.recurrent.LSTM'>, 50, 100, 100
+Downloading data from https://s3.amazonaws.com/text-datasets/babi_tasks_1-20_v1-2.tar.gz
+11747328/11745123 [==============================] - 1s 0us/step
+vocab = ['.', '?', 'Daniel', 'John', 'Mary', 'Sandra', 'Where', 'apple', 'back', 'bathroom', 'bedroom', 'discarded', 'down', 'dropped', 'football', 'garden', 'got', 'grabbed', 'hallway', 'is', 'journeyed', 'kitchen', 'left', 'milk', 'moved', 'office', 'picked', 'put', 'the', 'there', 'to', 'took', 'travelled', 'up', 'went']
+x.shape = (1000, 552)
+xq.shape = (1000, 5)
+y.shape = (1000, 36)
+story_maxlen, query_maxlen = 552, 5
+Build model...
+WARNING:tensorflow:From /usr/local/lib/python3.6/dist-packages/keras/backend/tensorflow_backend.py:66: The name tf.get_default_graph is deprecated. Please use tf.compat.v1.get_default_graph instead.
+
+WARNING:tensorflow:From /usr/local/lib/python3.6/dist-packages/keras/backend/tensorflow_backend.py:541: The name tf.placeholder is deprecated. Please use tf.compat.v1.placeholder instead.
+
+WARNING:tensorflow:From /usr/local/lib/python3.6/dist-packages/keras/backend/tensorflow_backend.py:4432: The name tf.random_uniform is deprecated. Please use tf.random.uniform instead.
+
+WARNING:tensorflow:From /usr/local/lib/python3.6/dist-packages/keras/optimizers.py:793: The name tf.train.Optimizer is deprecated. Please use tf.compat.v1.train.Optimizer instead.
+
+WARNING:tensorflow:From /usr/local/lib/python3.6/dist-packages/keras/backend/tensorflow_backend.py:3576: The name tf.log is deprecated. Please use tf.math.log instead.
+
+Training
+WARNING:tensorflow:From /usr/local/lib/python3.6/dist-packages/tensorflow_core/python/ops/math_grad.py:1424: where (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+WARNING:tensorflow:From /usr/local/lib/python3.6/dist-packages/keras/backend/tensorflow_backend.py:1033: The name tf.assign_add is deprecated. Please use tf.compat.v1.assign_add instead.
+
+WARNING:tensorflow:From /usr/local/lib/python3.6/dist-packages/keras/backend/tensorflow_backend.py:1020: The name tf.assign is deprecated. Please use tf.compat.v1.assign instead.
+
+WARNING:tensorflow:From /usr/local/lib/python3.6/dist-packages/keras/backend/tensorflow_backend.py:3005: The name tf.Session is deprecated. Please use tf.compat.v1.Session instead.
+
+Train on 950 samples, validate on 50 samples
+Epoch 1/20
+
+950/950 [==============================] - 21s 23ms/step - loss: 2.6150 - acc: 0.2032 - val_loss: 1.7573 - val_acc: 0.3000
+Epoch 2/20
+950/950 [==============================] - 19s 20ms/step - loss: 1.7961 - acc: 0.2095 - val_loss: 1.8893 - val_acc: 0.0600
+Epoch 3/20
+950/950 [==============================] - 19s 20ms/step - loss: 1.7984 - acc: 0.1947 - val_loss: 1.9000 - val_acc: 0.0600
+Epoch 4/20
+950/950 [==============================] - 19s 20ms/step - loss: 1.7903 - acc: 0.2032 - val_loss: 1.9315 - val_acc: 0.0600
+Epoch 5/20
+950/950 [==============================] - 19s 20ms/step - loss: 1.8030 - acc: 0.2011 - val_loss: 1.9023 - val_acc: 0.0600
+Epoch 6/20
+950/950 [==============================] - 19s 20ms/step - loss: 1.7937 - acc: 0.2000 - val_loss: 1.8240 - val_acc: 0.0600
+Epoch 7/20
+950/950 [==============================] - 19s 20ms/step - loss: 1.7914 - acc: 0.1958 - val_loss: 1.7512 - val_acc: 0.2000
+Epoch 8/20
+950/950 [==============================] - 19s 20ms/step - loss: 1.7889 - acc: 0.2147 - val_loss: 1.7197 - val_acc: 0.3000
+Epoch 9/20
+950/950 [==============================] - 19s 20ms/step - loss: 1.7787 - acc: 0.2095 - val_loss: 1.8141 - val_acc: 0.0600
+Epoch 10/20
+950/950 [==============================] - 19s 20ms/step - loss: 1.7939 - acc: 0.2021 - val_loss: 1.8058 - val_acc: 0.0600
+Epoch 11/20
+950/950 [==============================] - 19s 20ms/step - loss: 1.7796 - acc: 0.2105 - val_loss: 1.8139 - val_acc: 0.0600
+Epoch 12/20
+950/950 [==============================] - 19s 20ms/step - loss: 1.7836 - acc: 0.2042 - val_loss: 1.9017 - val_acc: 0.0600
+Epoch 13/20
+950/950 [==============================] - 19s 20ms/step - loss: 1.7884 - acc: 0.2063 - val_loss: 1.8336 - val_acc: 0.0600
+Epoch 14/20
+950/950 [==============================] - 19s 20ms/step - loss: 1.7840 - acc: 0.2326 - val_loss: 1.7923 - val_acc: 0.3400
+Epoch 15/20
+950/950 [==============================] - 19s 20ms/step - loss: 1.7747 - acc: 0.2347 - val_loss: 1.7860 - val_acc: 0.1000
+Epoch 16/20
+950/950 [==============================] - 19s 20ms/step - loss: 1.7696 - acc: 0.2316 - val_loss: 1.8268 - val_acc: 0.1400
+Epoch 17/20
+950/950 [==============================] - 19s 20ms/step - loss: 1.7696 - acc: 0.2263 - val_loss: 1.8060 - val_acc: 0.1400
+Epoch 18/20
+950/950 [==============================] - 19s 20ms/step - loss: 1.7468 - acc: 0.2674 - val_loss: 1.8271 - val_acc: 0.1800
+Epoch 19/20
+950/950 [==============================] - 19s 20ms/step - loss: 1.7483 - acc: 0.2684 - val_loss: 1.7021 - val_acc: 0.3200
+Epoch 20/20
+950/950 [==============================] - 19s 20ms/step - loss: 1.7406 - acc: 0.2663 - val_loss: 1.7039 - val_acc: 0.2800
+Evaluation
+1000/1000 [==============================] - 3s 3ms/step
+Test loss / test accuracy = 1.8002 / 0.2020
+'''
