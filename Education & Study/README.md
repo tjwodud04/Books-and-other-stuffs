@@ -8,5 +8,4 @@
 - Materials' at Graduate
 : Some materials at my Graduate school
 
-- 한국인공지능연구소
-: https://www.ai-lab.kr/ (2019.05.25 ~)
+- 빅데이터사이언스 실무자 양성 과정
