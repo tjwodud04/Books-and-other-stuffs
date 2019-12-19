@@ -1,11 +1,11 @@
-﻿- Education & Study
- : Some Codes and materials taking from educations
+- Education & Study
+ : Some Codes and materials
 
 - Kaggle Sotlutions Follow Up
- : Some kaggle codes that following solutions
+ : following solutions from kaggle
 
 - Papers
- : Papers to read
+ : interesting papers
 
 - Programming Language
- : various codes from books & etc for study
+ : various codes from books & etc for studying
