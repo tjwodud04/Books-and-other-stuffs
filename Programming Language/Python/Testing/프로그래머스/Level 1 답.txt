@@ -7,7 +7,7 @@ def solution(n):
         else:
             answer += '수'
     return answer
-
+-------------------------------------------
 행렬
 def solution(arr1, arr2):
     answer = []
@@ -17,3 +17,21 @@ def solution(arr1, arr2):
             tmp.append(arr1[i][j] + arr2[i][j])
         answer.append(tmp)
     return answer
+-------------------------------------------
+평균 구하기
+
+import numpy as np
+
+def solution(arr):
+    answer = 0
+    arr = np.array(arr)
+    average = sum(arr) / len(arr)
+    return average
+-------------------------------------------
+짝수와 홀수
+
+def solution(num):
+    if int(num) % 2 == 0:
+        return 'Even'
+    else:
+        return 'Odd'
