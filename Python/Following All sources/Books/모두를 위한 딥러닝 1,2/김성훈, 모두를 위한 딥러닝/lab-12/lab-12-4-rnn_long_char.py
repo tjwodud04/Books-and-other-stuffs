@@ -68,7 +68,7 @@ for i in range(500):
 results = sess.run(outputs, feed_dict={X: dataX})
 for j, result in enumerate(results):
     index = np.argmax(result, axis=1)
-    if j is 0:
+    if j == 0:
         print(''.join([char_set[t] for t in index]), end='')
     else:
         print(char_set[index[-1]], end='')
