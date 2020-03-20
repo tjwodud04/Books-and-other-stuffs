@@ -41,7 +41,7 @@ I think it would have all but the heartless reaching for the Prozac."],
 
 embedding = "https://tfhub.dev/google/tf2-preview/gnews-swivel-20dim/1"
 hub_layer = hub.KerasLayer(embedding, input_shape =[], dtype = tf.string, trainable=True)
-print(train_example_batch[:3])
+print(train_examples_batch[:3])
 '''result
 <tf.Tensor: shape=(3,), dtype=string, numpy=
 array([b"As a lifelong fan of Dickens, 
