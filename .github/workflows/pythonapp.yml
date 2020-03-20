@@ -36,4 +36,4 @@ jobs:
     - name: Test with pytest
       run: |
         pip install pytest
-        pytest
+        pytest cclauss/GitHub-Action-for-pytest@0.5.0
