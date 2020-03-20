@@ -1,2 +1,1 @@
-## CodePractice
-This repository is for practicing programming
+This repository is trace of my studies
