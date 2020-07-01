@@ -1,2 +1,2 @@
-This repository is trace of my studies
-(Creating this repo 2017 and actively commit since 2019)
+This repository is all efforts of my studies for programming
+(Actively commit since 2019)
