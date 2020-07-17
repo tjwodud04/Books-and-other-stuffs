@@ -1,0 +1,17 @@
+░▒▓    /mnt/c/U/Ja/De/new_project  npm init               ✔  at 20:57:27  ▓▒░
+zsh: command not found: npm
+
+░▒▓    /mnt/c/U/Ja/De/new_project  touch index.js     127 ✘  at 20:57:37  ▓▒░
+
+░▒▓    /mnt/c/U/Ja/De/new_project  mv index.js new_index.js
+
+░▒▓    /mnt/c/U/Ja/De/new_project  mv new_index.js index.js
+
+░▒▓    /mnt/c/U/Ja/De/new_project  rm index.js            ✔  at 20:58:46  ▓▒░
+
+░▒▓    /mnt/c/U/Ja/De/new_project  mkdir something/       ✔  at 20:59:31  ▓▒░
+
+░▒▓    /mnt/c/U/Ja/De/new_project  rm -rf something       ✔  at 20:59:42  ▓▒░
+
+░▒▓    /mnt/c/U/Ja/De/new_project 
+
