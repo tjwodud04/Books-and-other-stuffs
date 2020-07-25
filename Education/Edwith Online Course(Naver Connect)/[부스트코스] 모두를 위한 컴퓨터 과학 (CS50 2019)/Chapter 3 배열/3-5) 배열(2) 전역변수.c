@@ -11,3 +11,6 @@ int main(void)
 
     printf("Average: %i\n", (scores[0] + scores[1] + scores[2]) / N);
 }
+/*result
+Average: 59
+*/

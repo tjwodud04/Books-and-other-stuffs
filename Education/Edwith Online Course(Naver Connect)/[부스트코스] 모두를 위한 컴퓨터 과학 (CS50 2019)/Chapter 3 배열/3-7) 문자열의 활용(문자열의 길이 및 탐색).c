@@ -12,3 +12,14 @@ int main(void)
         printf("%c\n", s[i]);
     }
 }
+/*example result
+Input: literal
+Output:
+l
+i
+t
+e
+r
+a
+l
+*/

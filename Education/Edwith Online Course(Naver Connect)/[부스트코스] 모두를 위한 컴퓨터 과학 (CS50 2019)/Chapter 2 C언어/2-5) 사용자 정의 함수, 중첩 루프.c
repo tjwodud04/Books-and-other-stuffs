@@ -4,9 +4,14 @@ int main(void)
 {
     for (int i = 0; i < 3; i++)
     {
-        printf("cough\n")
+        printf("cough\n");
     }
 }
+/*result
+cough
+cough
+cough
+*/
 
 //-----------------------------------//
 
@@ -26,6 +31,11 @@ void cough(int n)
         printf("cough\n");
     }
 }
+/* result
+cough
+cough
+cough
+*/
 
 //-----------------------------------//
 
@@ -44,10 +54,15 @@ int get_positive_int(void)
     int n;
     do
     {
-        n = get_int("Positive Integer: ");
+        n = printf("Positive Integer: ");
+        scanf("%d", &n);
     } while (n < 1);
     return n;
 }
+/*example result
+Positive Integer: 9
+9
+*/
 
 //------------------------------------------//
 
@@ -73,3 +88,13 @@ int main(void)
         printf("\n");
     }
 }
+/*example result
+Size: 7
+#######
+#######
+#######
+#######
+#######
+#######
+#######
+*/
