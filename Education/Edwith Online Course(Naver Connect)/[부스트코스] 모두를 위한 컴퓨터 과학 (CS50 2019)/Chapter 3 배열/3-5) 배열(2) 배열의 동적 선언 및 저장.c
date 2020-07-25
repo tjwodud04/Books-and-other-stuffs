@@ -5,7 +5,7 @@ float average(int length, int array[]);
 int main(void)
 {
     int n;
-    printf("Scores:  ");
+    printf("Scores' total numbers:  ");
     scanf("%d", &n);
 
     int scores[n];
@@ -27,3 +27,11 @@ float average(int length, int array[])
     }
     return (float)sum / (float)length;
 }
+/*example result
+Scores' total numbers:  4
+Score 1: 20
+Score 2: 29
+Score 3: 77
+Score 4: 18
+Average: 36.0
+*/

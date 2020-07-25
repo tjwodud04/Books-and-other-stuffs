@@ -15,3 +15,7 @@ int main(void)
         printf("odd\n");
     }
 }
+/*example result
+n: 3
+odd
+*/

@@ -20,6 +20,10 @@ int main(void)
     }
     printf("\n");
 }
+/*example result
+Before: stringstring
+After:  STRINGSTRING
+*/
 
 //-------------------------------------//
 
@@ -31,7 +35,7 @@ int main(void)
 {
     char s[100];
     printf("Before: ");
-    scanf("%s".s);
+    scanf("%s", s);
     printf("After:  ");
     for (int i = 0, n = strlen(s); i < n; i++)
     {
@@ -39,3 +43,7 @@ int main(void)
     }
     printf("\n");
 }
+/*example result
+Before: somethingsomething
+After:  SOMETHINGSOMETHING
+*/
