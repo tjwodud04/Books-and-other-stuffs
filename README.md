@@ -9,4 +9,4 @@ This repo mainly contains 3 folders which are Education, Papers and Programming 
 - Speech / Voice related field  
 - Human-like AI  
 #### Main Language & Library that I use or learning  
-![Keras](./img/Keras_logo.png) ![Tensorflow](./img/TensorFlowLogo.png) ![Python](./img/Python_logo_and_wordmark.png)
+![Keras](./image/Keras_logo.png) ![Tensorflow](./image/TensorFlowLogo.png) ![Python](./image/Python_logo_and_wordmark.png)
