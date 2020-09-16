@@ -3,7 +3,7 @@ This repo is all my efforts of studies for programming
 
 This repo mainly contains 3 folders which are Education, Papers and Programming Language.
 
-### Short Intro  
+### Short In  
 #### Field of Interest  
 - Natural Language Processing Field (Especially long turn of Human-like Dialogue / Chatting-bot)  
 - Speech / Voice related field  
