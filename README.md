@@ -8,5 +8,5 @@ This repo mainly contains 3 folders which are Education, Papers and Programming 
 - Natural Language Processing Field (Especially long turn of Human-like Dialogue / Chatting-bot)  
 - Speech / Voice related field  
 - Human-like AI  
-#### Main Language & Library that I use or learning  
+#### Main Language & Library 
 ![Keras](./image/Keras_logo.png) ![Tensorflow](./image/TensorFlowLogo.png) ![Python](./image/Python_logo_and_wordmark.png)
