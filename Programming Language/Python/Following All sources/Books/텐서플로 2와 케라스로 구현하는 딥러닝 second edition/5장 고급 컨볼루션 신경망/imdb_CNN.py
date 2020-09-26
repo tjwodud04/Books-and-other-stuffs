@@ -1,40 +1,58 @@
-from tensorflow.keras import datasets, layers, models, preprocessing
+from __future__ import print_function
+from tensorflow.keras.preprocessing import sequence
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import Dense, Dropout, Activation
+from tensorflow.keras.layers import Embedding
+from tensorflow.keras.layers import Conv1D, GlobalMaxPooling1D
+from tensorflow.keras.datasets import imdb
 
-max_len = 200
-n_words = 10000
-dim_embedding = 256
-EPOCHS = 20
-BATCH_SIZE =500
+max_features = 5000
+maxlen = 400
+batch_size = 32
+embedding_dims = 50
+filters = 250
+kernel_size = 3
+hidden_dims = 250
+epochs = 7
 
-def load_data():
-	(X_train, y_train), (X_test, y_test) = datasets.imdb.load_data(num_words=n_words)
-	X_train = preprocessing.sequence.pad_sequences(X_train, maxlen=max_len)
-	X_test = preprocessing.sequence.pad_sequences(X_test, maxlen=max_len)
+print('Loading data...')
 
-	return (X_train, y_train), (X_test, y_test)
+(x_train, y_train), (x_test, y_test) = imdb.load_data(num_words=max_features)
 
-def build_model():
-	model = models.Sequential()
-	model.add(layers.Embedding(n_words, dim_embedding, input_length=max_len))
-	model.add(layers.Dropout(0.3))
-	model.add(layers.Conv1D(256, 3, padding='valid', activation='relu'))
-	model.add(layers.GlobalMaxPooling1D())
-	model.add(layers.Dense(128, activation='relu'))
-	model.add(layers.Dropout(0.5))
-	model.add(layers.Dense(1, activation='sigmoid'))
+print(len(x_train), 'train sequences')
+print(len(x_test), 'test sequences')
 
-	return model
+print('Pad sequences (samples x time)')
 
-(X_train, y_train), (X_test, y_test) = load_data()
-model=build_model()
+x_train = sequence.pad_sequences(x_train, maxlen=maxlen)
+x_test = sequence.pad_sequences(x_test, maxlen=maxlen)
 
-model.summary()
+print('x_train shape:', x_train.shape)
+print('x_test shape:', x_test.shape)
 
-model.compile(optimizer = "adam", loss = "binary_crossentropy", metrics = ["accuracy"])
+print('Build model...')
 
-score = model.fit(X_train, y_train, epochs= EPOCHS, batch_size = BATCH_SIZE, validation_data = (X_test, y_test))
+model = Sequential()
 
-score = model.evaluate(X_test, y_test, batch_size=BATCH_SIZE)
+model.add(Embedding(max_features, embedding_dims, input_length=maxlen))
+model.add(Dropout(0.2))
+model.add(Conv1D(filters, kernel_size, padding='valid', activation='relu', strides=1))
+model.add(GlobalMaxPooling1D())
+model.add(Dense(hidden_dims))
+model.add(Dropout(0.2))
+model.add(Activation('relu'))
+model.add(Dense(1))
+model.add(Activation('sigmoid'))
 
-print("\nTest score:", score[0])
-print('Test accuracy:', score[1])
+model.compile(loss='binary_crossentropy',
+              optimizer='adam',
+              metrics=['accuracy'])
+
+model.fit(x_train, y_train,
+          batch_size=batch_size,
+          epochs=epochs,
+          validation_data=(x_test, y_test))
+
+score = model.evaluate(x_test, y_test, batch_size=batch_size)
+
+print('Test accuracy: %.4f' % score[1])
