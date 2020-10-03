@@ -1,0 +1,8 @@
+pull_request_rules:
+  - name: automatic merge for master when CI passes approved by dddsaty
+    conditions:
+      - approved-reviews-by=dddsaty
+      - status-success=Travis CI - Pull Request
+    actions:
+      merge:
+        method: merge
