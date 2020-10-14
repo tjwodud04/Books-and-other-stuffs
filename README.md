@@ -5,8 +5,12 @@ This repo mainly contains 3 folders which are Education, Papers and Programming 
 
 ### Short Info  
 #### Field of Interest  
-- NLP (Especially long turn Human-like Dialogue / Chatbot)  
+- NLP (Especially open-domain long turn Human-like Dialogue / Chatbot)  
 - Speech / Voice
 - Human-AI Interaction  
 #### Main Language & Library 
 ![Keras](./image/Keras_logo.png) ![Tensorflow](./image/TensorFlowLogo.png) ![Python](./image/Python_logo_and_wordmark.png)
+
+#### Ongoing Study
+- Speech / Voice Recognition (mainly have a class at weekend)
+- Pytorch (HuggingFace mainly optimize at Pytorch)
