@@ -12,7 +12,7 @@ def download_and_read(url):
     labels, texts = [], []
     local_file = os.path.join("datasets", "SMSSpamCollection")
     
-    with open(local_file, "r") as fin:
+    with open(local_file, "r", encoding="utf-8") as fin:
         for line in fin:
             label, text = line.strip().split('\t')
             labels.append(1 if label == "spam" else 0)
@@ -151,6 +151,27 @@ model = SpamClassifierModel(
     run_mode, E)
 model.build(input_shape=(None, max_seqlen))
 model.summary()
+'''
+Embedding matrix: (9010, 300)
+Model: "spam_classifier_model"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+embedding (Embedding)        multiple                  2703000   
+_________________________________________________________________
+spatial_dropout1d (SpatialDr multiple                  0         
+_________________________________________________________________
+conv1d (Conv1D)              multiple                  230656    
+_________________________________________________________________
+global_max_pooling1d (Global multiple                  0         
+_________________________________________________________________
+dense (Dense)                multiple                  514       
+=================================================================
+Total params: 2,934,170
+Trainable params: 2,934,170
+Non-trainable params: 0
+_________________________________________________________________
+'''
 
 model.compile(optimizer="adam", loss="categorical_crossentropy",
     metrics=["accuracy"])
@@ -171,3 +192,17 @@ for Xtest, Ytest in test_dataset:
 print("test accuracy: {:.3f}".format(accuracy_score(labels, predictions)))
 print("confusion matrix")
 print(confusion_matrix(labels, predictions))
+'''
+test accuracy: 1.000
+confusion matrix
+[[1091    0]
+ [   0  189]]
+'''
+'''
+Epoch 1/3
+29/29 [==============================] - 1s 37ms/step - loss: 0.5832 - accuracy: 0.8475 - val_loss: 0.0879 - val_accuracy: 0.9714
+Epoch 2/3
+29/29 [==============================] - 1s 32ms/step - loss: 0.2140 - accuracy: 0.9628 - val_loss: 0.0408 - val_accuracy: 0.9948
+Epoch 3/3
+29/29 [==============================] - 1s 32ms/step - loss: 0.1095 - accuracy: 0.9838 - val_loss: 0.0630 - val_accuracy: 0.9818
+'''
