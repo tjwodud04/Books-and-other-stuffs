@@ -1,7 +1,7 @@
 # 행렬의 성분값을 바꾸어 다른 색으로 표현하기
 
-import turtle                                # 그래픽 처리를 위한 모듈
-import numpy as np                           # 벡터, 행렬 데이터를 쉽게 처리하기 위한 모듈
+import turtle
+import numpy as np
 
 myImg = np.array([[0, 0, 0, 0, 0, 0, 0, 0],
                   [0, 1, 1, 1, 0, 0, 0, 0],
