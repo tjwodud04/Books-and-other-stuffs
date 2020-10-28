@@ -1,6 +1,4 @@
 # 데이터를 직접 설정해 보기
-# dictionary : 요일별로 각 시간대에 저장해야 할 데이터 {num, wnum, ynum}
-# 7 x 24 크기의 list 이 필요
 
 a1 = []
 a1.append({'num':0, 'wnum':0, 'ynum':0})     
