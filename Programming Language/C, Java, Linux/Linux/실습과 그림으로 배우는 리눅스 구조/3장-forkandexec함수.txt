@@ -1,6 +1,0 @@
-﻿donddog@Jae:~$ vim fork-and-exec.c
-donddog@Jae:~$ cc -o fork-and-exec fork-and-exec.c
-donddog@Jae:~$ ./fork-and-exec
-I'm parent! my pid is 135 and the pid of my child is 136.
-I'm child! my pid is 136.
-donddog@Jae:~$ hello
