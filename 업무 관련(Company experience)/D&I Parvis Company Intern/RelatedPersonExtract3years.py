@@ -1,4 +1,4 @@
-from collections import OrderedDict
+# from collections import OrderedDict
 
 with open(r'C:\Users\korea\Desktop\save_3years.txt', 'w', encoding='utf-8') as fp:
     with open(r'C:\Users\korea\Desktop\FilesAll\RelatedPerson.txt', 'r', encoding='utf-8') as f:

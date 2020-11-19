@@ -27,8 +27,8 @@ for word in word_tokens1:
         result1.append(word)
 
 for words in word_tokens2:
-    if word not in stop_words:
-        result2.append(word)
+    if words not in stop_words:
+        result2.append(words)
 
 print(stopwords.words('english')[:10])
 print(word_tokens1)

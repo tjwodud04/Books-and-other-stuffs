@@ -1,7 +1,6 @@
 from selenium import webdriver
 from bs4 import BeautifulSoup
 import time
-import re
 
 driver = webdriver.Chrome('/Users/j/Desktop/chromedriver')
 #driver = webdriver.PhantomJS('/Users/j/Desktop/phantomjs-2.1.1-windows/bin/phantomjs')
