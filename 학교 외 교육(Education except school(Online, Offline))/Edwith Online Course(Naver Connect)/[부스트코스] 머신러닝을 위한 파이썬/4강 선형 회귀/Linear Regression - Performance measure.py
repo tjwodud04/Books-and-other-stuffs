@@ -1,4 +1,4 @@
-``#Mean Absolute Error(MAE)
+#Mean Absolute Error(MAE)
 from sklearn.metrics import median_absolute_error
 
 y_true = [3, -0.5, 2, 7]
