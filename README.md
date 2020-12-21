@@ -6,5 +6,3 @@ This repo is all my efforts of studies for programming
 - NLP (Especially open-domain long turn Human-like Dialogue / Chatbot)  
 - Speech / Voice
 - Human-AI Interaction  
-#### Main Language
-![Python](./image/Python_logo_and_wordmark.png)
