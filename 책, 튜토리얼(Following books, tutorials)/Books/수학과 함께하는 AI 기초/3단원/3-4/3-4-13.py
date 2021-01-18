@@ -1,7 +1,6 @@
 import librosa
 import librosa.display
 import numpy as np
-import matplotlib.pyplot as plt
 
 # 입력변수와 출력변수 생성하기
 X_train=np.zeros((40,20))
