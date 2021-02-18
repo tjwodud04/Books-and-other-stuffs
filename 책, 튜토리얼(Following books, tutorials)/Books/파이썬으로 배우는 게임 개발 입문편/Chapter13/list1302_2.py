@@ -4,5 +4,11 @@ class GameCharacter:
         self.life = life
 
 warrior = GameCharacter("전사", 100)
+
 print(warrior.job)
 print(warrior.life)
+
+'''
+전사
+100
+'''

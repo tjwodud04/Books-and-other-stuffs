@@ -8,7 +8,18 @@ class GameCharacter:
         print(self.life)
 
 human1 = GameCharacter("전사", 120)
+
 human1.info()
 
+'''
+전사
+120
+'''
+
 human2 = GameCharacter("마법사", 80)
+
 human2.info()
+'''
+마법사
+80
+'''

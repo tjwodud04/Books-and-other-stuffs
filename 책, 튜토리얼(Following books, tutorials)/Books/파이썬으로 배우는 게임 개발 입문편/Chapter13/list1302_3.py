@@ -8,4 +8,10 @@ class GameCharacter:
         print(self.life)
 
 warrior = GameCharacter("전사", 100)
+
 warrior.info()
+
+'''
+전사
+100
+'''
