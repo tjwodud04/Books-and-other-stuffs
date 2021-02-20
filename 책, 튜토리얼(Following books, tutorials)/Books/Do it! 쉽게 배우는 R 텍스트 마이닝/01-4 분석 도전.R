@@ -1,5 +1,5 @@
 # Q1 speecha_park.txt 전처리 / 띄어쓰기 기준 토큰화
-raw_park <- readLines(speech_park.txt", encoding = "UTF-8")
+raw_park <- readLines("speech_park.txt", encoding = "UTF-8")
 head(raw_park)
 
 park <- raw_park %>%
