@@ -1,2 +1,1 @@
-This repo is trails of studies for programming
-(Actively commit since 2019)
+This repo is trails of studies for programming (Actively commit since 2019)
