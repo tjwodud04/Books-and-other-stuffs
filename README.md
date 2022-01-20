@@ -1,1 +1,1 @@
-This repo contains books or tutorials
+This repo contains contents of books or tutorials
